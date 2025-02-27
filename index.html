@@ -1,192 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Us - Omakase Experience</title>
-  <style>
-    /* Japandi Style - Black & White Minimalist */
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fcfcfc;
-      color: #222;
-      line-height: 1.6;
-      letter-spacing: 0.5px;
-    }
-    
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    
-    h1 {
-      font-weight: 300;
-      font-size: 2.4em;
-      margin: 0;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-    
-    header p {
-      font-weight: 300;
-      margin-top: 15px;
-      font-size: 1.1em;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    nav {
-      border-bottom: 1px solid #eee;
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    nav ul li {
-      padding: 20px 30px;
-    }
-    
-    nav ul li a {
-      color: #222;
-      text-decoration: none;
-      font-size: 0.9em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      transition: color 0.3s;
-    }
-    
-    nav ul li a:hover {
-      color: #777;
-    }
-    
-    nav ul li a:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -5px;
-      left: 0;
-      background-color: #222;
-      transition: width 0.3s;
-    }
-    
-    nav ul li a:hover:after {
-      width: 100%;
-    }
-    
-    .container {
-      padding: 80px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    
-    h2 {
-      font-weight: 300;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 40px;
-      position: relative;
-      display: inline-block;
-    }
-    
-    h2:after {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 1px;
-      background-color: #222;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    .location-info {
-      margin-bottom: 60px;
-    }
-    
-    .location-info p {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-    
-    .map {
-      margin: 40px 0;
-      padding: 0 20px;
-    }
-    
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    footer {
-      background: #222;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9em;
-      letter-spacing: 1px;
-    }
-    
-    @media (max-width: 768px) {
-      nav ul li {
-        padding: 15px 20px;
-      }
-      
-      h1 {
-        font-size: 2em;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAWA Omakase</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        /* Full-screen background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        /* Navigation */
+        .navigation {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        
+        .menu {
+            list-style: none;
+        }
+        
+        .menu li {
+            margin: 20px 0;
+        }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .menu a:hover {
+            opacity: 0.7;
+        }
+
+        /* Info page styles */
+        .info-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .info-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .info-content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .info-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .map-container {
+            margin: 30px 0;
+            height: 300px;
+            width: 100%;
+        }
+
+        .info-content .contact {
+            margin-top: 30px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        /* Menu popup container */
+        .menu-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            overflow-y: auto;
+        }
+        
+        .menu-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f8f8f8;
+            color: #333;
+            text-align: center;
+            font-family: 'EB Garamond', serif;
+        }
+        
+        .menu-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .menu-content ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2em;
+        }
+        
+        .menu-content li {
+            padding: 5px 0;
+        }
+        
+        .menu-content p {
+            font-size: 0.9em;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Find Us</h1>
-    <p>Visit our restaurant and indulge in an unforgettable dining experience</p>
-  </header>
-  
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="findus.html">Find Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  
-  <div class="container">
-    <h2>Our Location</h2>
+    <!-- Full-screen background image -->
+    <div class="background"></div>
     
-    <div class="location-info">
-      <p>37 E 1st St, New York, NY 10003</p>
-      <p>Open Daily: 5:00 PM - 11:00 PM</p>
-      <p>Phone: +1 212-123-4567</p>
+    <!-- Centered navigation -->
+    <div class="navigation">
+        <div class="logo">KAWA OMAKASE</div>
+        <ul class="menu">
+            <li><a href="#" id="menu-link">MENU</a></li>
+            <li><a href="https://resy.com/yourreservationlink" target="_blank">RESERVE</a></li>
+            <li><a href="#" id="info-link">INFO</a></li>
+        </ul>
     </div>
-    
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.8980940056506!2d-73.98968092392631!3d40.72408687138086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2599c0f2dd877%3A0x30a19c44e0dc6d8e!2s37%20E%201st%20St%2C%20New%20York%2C%20NY%2010003!5e0!3m2!1sen!2sus!4v1708995551234!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+
+    <!-- Menu popup section -->
+    <div id="menu-container" class="menu-container">
+        <button class="close-btn" id="close-menu">&times;</button>
+        <div class="menu-content">
+            <h1>KAWA OMAKASE Tasting Menu</h1>
+            <ul>
+                <li><strong>Madai</strong></li>
+                <li><strong>Special Seasonal Fish</strong></li>
+                <li><strong>Hamachi</strong></li>
+                <li><strong>Black Cod</strong></li>
+                <li><strong>Botan Ebi</strong></li>
+                <li><strong>Hotate</strong></li>
+                <li><strong>Sake</strong></li>
+                <li><strong>Akamai</strong></li>
+                <li><strong>Toro</strong></li>
+                <li><strong>Mini Don</strong> (Ikura, Hokkaido Uni)</li>
+                <li><strong>Miyazaki A5 Wagyu</strong></li>
+                <li><strong>Unagi</strong></li>
+                <li><strong>Hand Roll</strong></li>
+            </ul>
+            <p><em>Please inform us of any food allergies. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness.</em></p>
+            <p><em>Our menu changes seasonally to ensure the best flavors at their peak.</em></p>
+        </div>
     </div>
-  </div>
-  
-  <footer>
-    <p>&copy; 2025 Omakase Experience. All rights reserved.</p>
-  </footer>
+
+    <!-- Info popup section -->
+    <div id="info-container" class="info-container">
+        <button class="close-btn" id="close-info">&times;</button>
+        <div class="info-content">
+            <h2>KAWA OMAKASE</h2>
+            <p>123 Sushi Street, New York, NY 10001</p>
+            
+            <div class="map-container">
+                <img src="/api/placeholder/800/300" alt="Google Maps location" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            
+            <div class="contact">
+                <p>Phone: (212) 555-6789</p>
+                <p>Email: info@kawaomakase.com</p>
+                <p>Hours: Tue-Sun 5:30pm-11:00pm</p>
+                <p>Closed on Mondays</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Menu popup functionality
+        document.getElementById('menu-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('menu-container').style.display = 'block';
+        });
+        
+        document.getElementById('close-menu').addEventListener('click', function() {
+            document.getElementById('menu-container').style.display = 'none';
+        });
+        
+        // Info popup functionality
+        document.getElementById('info-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('info-container').style.display = 'block';
+        });
+        
+        document.getElementById('close-info').addEventListener('click', function() {
+            document.getElementById('info-container').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
