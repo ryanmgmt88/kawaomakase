@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -174,13 +175,12 @@
             color: #777;
         }
   
-
-.map-container iframe {
-    width: 100%; /* Takes up full width of .map-container */
-    height: 100%; /* Matches the 300px height of .map-container */
-}
+        .map-container iframe {
+            width: 100%; /* Takes up full width of .map-container */
+            height: 100%; /* Matches the 300px height of .map-container */
+        }
         
-         /* Media query for devices with a max width of 768px (tablets and below) */
+        /* Media query for devices with a max width of 768px (tablets and below) */
         @media (max-width: 768px) {
             .logo {
                 font-size: 24px; /* Smaller logo font size */
@@ -206,8 +206,8 @@
                 font-size: 14px; /* Smaller info paragraph font size */
             }
             .map-container {
-        height: 200px;
-    }
+                height: 200px;
+            }
         }
 
         /* Media query for devices with a max width of 480px (mobile phones) */
@@ -237,10 +237,10 @@
                 
             }
             .map-container {
-        height: 150px;
-    }
+                height: 150px;
+            }
         }
-         /* Enhancing the menu's visual appeal */
+        /* Enhancing the menu's visual appeal */
         .menu-content li {
             padding: 10px 0;
             border-bottom: 1px solid #eee; /* Add a subtle divider */
@@ -249,7 +249,59 @@
         .menu-content strong { /* Style the fish names */
             font-family: 'Playfair Display', serif;
         }
+        
+        /* Google Maps Store Locator styles */
+        .locator-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            overflow-y: auto;
+        }
+        
+        .locator-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+            height: 600px;
+        }
+        
+        gmpx-store-locator {
+            width: 100%;
+            height: 100%;
+            /* These parameters customize the appearance of Locator Plus */
+            --gmpx-color-surface: #fff;
+            --gmpx-color-on-surface: #212121;
+            --gmpx-color-on-surface-variant: #757575;
+            --gmpx-color-primary: #1967d2;
+            --gmpx-color-outline: #e0e0e0;
+            --gmpx-fixed-panel-width-row-layout: 28.5em;
+            --gmpx-fixed-panel-height-column-layout: 65%;
+            --gmpx-font-family-base: "Roboto", sans-serif;
+            --gmpx-font-family-headings: "Roboto", sans-serif;
+            --gmpx-font-size-base: 0.875rem;
+            --gmpx-hours-color-open: #188038;
+            --gmpx-hours-color-closed: #d50000;
+            --gmpx-rating-color: #ffb300;
+            --gmpx-rating-color-empty: #e0e0e0;
+        }
     </style>
+    <script>
+        const CONFIGURATION = {
+            "locations": [
+                {"title":"Kawa Omakase","address1":"37 E 1st St","address2":"NEW YORK, NY, United States","coords":{"lat":40.7238673,"lng":-73.9902574},"placeId":"ChIJZ4RWjv5ZwokRS9HgXBVRzFo"}
+            ],
+            "mapOptions": {"center":{"lat":40.7238673,"lng":-73.9902574},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":15,"zoomControl":true,"maxZoom":17,"mapId":""},
+            "mapsApiKey": "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
+            "capabilities": {"input":true,"autocomplete":true,"directions":true,"distanceMatrix":true,"details":true,"actions":false}
+        };
+    </script>
 </head>
 <body>
     <!-- Full-screen background image -->
@@ -262,6 +314,7 @@
             <li><a href="#" id="menu-link">MENU</a></li>
             <li><a href="https://resy.com/yourreservationlink" target="_blank">RESERVE</a></li>
             <li><a href="#" id="info-link">INFO</a></li>
+            <li><a href="#" id="locator-link">FIND US</a></li>
         </ul>
     </div>
 
@@ -310,6 +363,16 @@
         </div>
     </div>
 
+    <!-- Store Locator popup section -->
+    <div id="locator-container" class="locator-container">
+        <button class="close-btn" id="close-locator" aria-label="Close Locator" tabindex="0">×</button>
+        <div class="locator-content">
+            <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+            <gmpx-api-loader key="AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg" solution-channel="GMP_QB_locatorplus_v11_cABCDE"></gmpx-api-loader>
+            <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+        </div>
+    </div>
+
     <script>
         // Menu popup functionality
         document.getElementById('menu-link').addEventListener('click', function(e) {
@@ -322,20 +385,9 @@
         });
         
         // Info popup functionality
-        document.getElementById('info-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('info-container').style.display = 'block';
-        });
-        
-        document.getElementById('close-info').addEventListener('click', function() {
-            document.getElementById('info-container').style.display = 'none';
-        });
-        document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.getElementById('menu-container').style.display = 'none';
-        document.getElementById('info-container').style.display = 'none';
-    }
-});
-    </script>
-</body>
-</html>
+        document.getElementById('info-link').addEventListener('click', function(e
+Made with
+Artifacts are user-generated and may contain unverified or potentially unsafe content.
+Report
+Remix Artifact
+
