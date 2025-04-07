@@ -74,6 +74,28 @@
             transform: scale(1.05);
         }
 
+        /* Reservation button styles */
+        .reserve-btn {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        
+        .reserve-btn:hover, .reserve-btn:active, .reserve-btn:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
         /* Info page styles */
         .info-container {
             display: none;
@@ -186,7 +208,7 @@
                 font-size: 24px; /* Smaller logo font size */
             }
 
-            .menu a {
+            .menu a, .reserve-btn {
                 font-size: 16px; /* Smaller menu font size */
             }
 
@@ -206,8 +228,8 @@
                 font-size: 14px; /* Smaller info paragraph font size */
             }
             .map-container {
-        height: 200px;
-    }
+                height: 200px;
+            }
         }
 
         /* Media query for devices with a max width of 480px (mobile phones) */
@@ -216,7 +238,7 @@
                 font-size: 18px; /* Even smaller logo font size */
             }
 
-            .menu a {
+            .menu a, .reserve-btn {
                 font-size: 14px; /* Even smaller menu font size */
             }
 
@@ -237,8 +259,8 @@
                 
             }
             .map-container {
-        height: 150px;
-    }
+                height: 150px;
+            }
         }
          /* Enhancing the menu's visual appeal */
         .menu-content li {
@@ -260,7 +282,7 @@
         <div class="logo">KAWA OMAKASE</div>
         <ul class="menu">
             <li><a href="#" id="menu-link">MENU</a></li>
-            <li><a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank">RESERVE</a></li>
+            <li><button class="reserve-btn" id="reserve-btn">RESERVE</button></li>
             <li><a href="#" id="info-link">INFO</a></li>
         </ul>
     </div>
@@ -330,12 +352,18 @@
         document.getElementById('close-info').addEventListener('click', function() {
             document.getElementById('info-container').style.display = 'none';
         });
+        
+        // Reservation button functionality
+        document.getElementById('reserve-btn').addEventListener('click', function() {
+            window.location.href = 'https://resy.com/cities/new-york-ny/venues/kawa-omakase';
+        });
+        
         document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        document.getElementById('menu-container').style.display = 'none';
-        document.getElementById('info-container').style.display = 'none';
-    }
-});
+            if (e.key === 'Escape') {
+                document.getElementById('menu-container').style.display = 'none';
+                document.getElementById('info-container').style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
