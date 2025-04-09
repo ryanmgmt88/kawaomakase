@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -81,10 +82,18 @@
             background-color: rgba(0, 0, 0, 0.3);
             border: 2px solid white;
             border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: opacity 0.3s ease;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
         
         .reserve-link:hover, .reserve-link:active {
             background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0.7;
         }
 
         /* Info page styles */
@@ -225,6 +234,11 @@
             .menu a {
                 padding: 12px 20px;
             }
+            
+            .reserve-link {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
         }
 
         /* Media query for devices with a max width of 480px (mobile phones) */
@@ -243,6 +257,9 @@
             }
             
             .reserve-link {
+                font-size: 14px;
+                padding: 15px 25px;
+                display: inline-block;
                 width: 200px;
                 max-width: 80vw;
             }
@@ -287,15 +304,8 @@
         <div class="logo">KAWA OMAKASE</div>
         <ul class="menu">
             <li><a href="#" id="menu-link">MENU</a></li>
-            <li><a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" class="reserve-link" id="reserve-link" onclick="window.open('https://resy.com/cities/new-york-ny/venues/kawa-omakase', '_blank'); return false;">RESERVE</a></li>
-            
-            
-             <div style="text-align: center;"><a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" id="resyButton-8LT4nGxFLSitOmwI0MFWU">Book your Kawa Omakase reservation on Resy</a></div>
-<script src="https://widgets.resy.com/embed.js"></script>
-<script>
-    resyWidget.addButton(document.getElementById('resyButton-8LT4nGxFLSitOmwI0MFWU'), {"venueId":87936,"apiKey":"KMsh20Iyxf1Ek98HoTnbpMD80qh7gKze","replace":true});
-</script>
             <li><a href="#" id="info-link">INFO</a></li>
+            <li><a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" class="reserve-link">RESERVE</a></li>
         </ul>
     </div>
 
@@ -365,20 +375,13 @@
             document.getElementById('info-container').style.display = 'none';
         });
 
-        // Additional direct link method for mobile
-        document.getElementById('reserve-link').addEventListener('touchend', function() {
-            window.location.href = 'https://resy.com/cities/new-york-ny/venues/kawa-omakase';
-        });
-        
+        // Close popups with Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 document.getElementById('menu-container').style.display = 'none';
                 document.getElementById('info-container').style.display = 'none';
             }
         });
-        </script>
-        
-   
-    
+    </script>
 </body>
 </html>
