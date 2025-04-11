@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Sake & Beverage Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F5F0;
+            margin: 0;
+            padding: 40px;
+            color: #2A2A2A;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+            color: #2A2A2A;
+            margin-bottom: 60px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #A8B5A2;
+            margin: 50px 0 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: #FFF;
+            border-radius: 4px;
+            border: 1px solid #E5E5E5;
+            padding: 20px;
+        }
+        .card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2A2A2A;
+            margin: 0 0 15px;
+        }
+        .card p {
+            margin: 3px 0;
+            font-size: 0.85em;
+            line-height: 1.7;
+            color: #2A2A2A;
+        }
+        .price {
+            font-size: 1em;
+            font-weight: 600;
+            color: #A8B5A2;
+            margin-top: 15px;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 120px;
+            background-color: #E5E5E5;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            color: #2A2A2A;
+            text-align: center;
+        }
+        .section-divider {
+            margin: 60px 0;
+            border-top: 1px solid #E5E5E5;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sake & Beverage Selection</h1>
+
+        <h2>Sake</h2>
+        <div class="menu-grid">
+            <!-- Dassai 45 Junmai Daiginjo -->
+            <div class="card">
+                <div class="image-placeholder">Image: Dassai Bottle (Unsplash: minimalist sake bottle)</div>
+                <h3>Dassai 45 Junmai Daiginjo (720ml)</h3>
+                <p><strong>Origin:</strong> Yamaguchi Prefecture, Japan</p>
+                <p><strong>Rice Polishing Ratio:</strong> 45%</p>
+                <p><strong>SMV:</strong> +3 (Slightly Dry)</p>
+                <p><strong>Acidity:</strong> 1.4</p>
+                <p><strong>Tasting Notes:</strong> Melon, Mandarin, Blossom</p>
+                <p><strong>Pairings:</strong> Grilled Shellfish, Miso-Marinated Cod</p>
+                <p><strong>Serving Temp:</strong> Chilled</p>
+                <p class="price">$70</p>
+            </div>
+
+            <!-- Kubota Junmai Daiginjo (300ml) -->
+            <div class="card">
+                <div class="image-placeholder">Image: Kubota Bottle (Unsplash: minimalist sake bottle)</div>
+                <h3>Kubota Junmai Daiginjo (300ml)</h3>
+                <p><strong>Origin:</strong> Niigata Prefecture, Japan</p>
+                <p><strong>Rice Polishing Ratio:</strong> 50%</p>
+                <p><strong>SMV:</strong> +2 (Slightly Dry)</p>
+                <p><strong>Acidity:</strong> 1.3</p>
+                <p><strong>Tasting Notes:</strong> Pear, Apple, Clean Finish</p>
+                <p><strong>Pairings:</strong> Sushi, Light Appetizers</p>
+                <p><strong>Serving Temp:</strong> Chilled</p>
+                <p class="price">$38</p>
+            </div>
+
+            <!-- Kubota Junmai Daiginjo (720ml) -->
+            <div class="card">
+                <div class="image-placeholder">Image: Kubota Bottle (Unsplash: minimalist sake bottle)</div>
+                <h3>Kubota Junmai Daiginjo (720ml)</h3>
+                <p><strong>Origin:</strong> Niigata Prefecture, Japan</p>
+                <p><strong>Rice Polishing Ratio:</strong> 50%</p>
+                <p><strong>SMV:</strong> +2 (Slightly Dry)</p>
+                <p><strong>Acidity:</strong> 1.3</p>
+                <p><strong>Tasting Notes:</strong> Pear, Apple, Clean Finish</p>
+                <p><strong>Pairings:</strong> Sushi, Light Appetizers</p>
+                <p><strong>Serving Temp:</strong> Chilled</p>
+                <p class="price">$78</p>
+            </div>
+
+            <!-- Yuzu Omoi Sake -->
+            <div class="card">
+                <div class="image-placeholder">Image: Yuzu Sake (Unsplash: minimalist citrus sake)</div>
+                <h3>Yuzu Omoi Sake</h3>
+                <p><strong>Origin:</strong> Akita Prefecture, Japan</p>
+                <p><strong>Type:</strong> Yuzushu (Citrus-infused Sake)</p>
+                <p><strong>Alcohol Content:</strong> 8%</p>
+                <p><strong>Tasting Notes:</strong> Fresh Yuzu Citrus, Sweet and Tart</p>
+                <p><strong>Pairings:</strong> Light Desserts, Fruit Salads</p>
+                <p><strong>Serving Temp:</strong> Chilled</p>
+                <p class="price">$38</p>
+            </div>
+
+            <!-- Suigei Drunken Whale -->
+            <div class="card">
+                <div class="image-placeholder">Image: Suigei Bottle (Unsplash: minimalist sake bottle)</div>
+                <h3>Suigei “Drunken Whale” Tokubetsu Junmai (720ml)</h3>
+                <p><strong>Origin:</strong> Kochi Prefecture, Japan</p>
+                <p><strong>Rice Polishing Ratio:</strong> 55%</p>
+                <p><strong>SMV:</strong> +5 (Dry)</p>
+                <p><strong>Acidity:</strong> 1.6</p>
+                <p><strong>Tasting Notes:</strong> Clean, Crisp, Slight Umami</p>
+                <p><strong>Pairings:</strong> Grilled Meats, Rich Dishes</p>
+                <p><strong>Serving Temp:</strong> Room Temperature or Warm</p>
+                <p class="price">$42</p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>Beverages</h2>
+        <div class="menu-grid">
+            <!-- S.Pellegrino -->
+            <div class="card">
+                <div class="image-placeholder">Image: Sparkling Water (Unsplash: minimalist glass water)</div>
+                <h3>S.Pellegrino Sparkling Water (750ml)</h3>
+                <p><strong>Origin:</strong> San Pellegrino Terme, Italy</p>
+                <p><strong>Tasting Notes:</strong> Crisp, Clean, Fine Bubbles</p>
+                <p class="price">$8</p>
+            </div>
+
+            <!-- Hot Green Tea -->
+            <div class="card">
+                <div class="image-placeholder">Image: Green Tea (Unsplash: minimalist ceramic cup)</div>
+                <h3>Hot Green Tea</h3>
+                <p><strong>Origin:</strong> Japan</p>
+                <p><strong>Type:</strong> Sencha Green Tea</p>
+                <p><strong>Tasting Notes:</strong> Fresh, Grassy, Slightly Astringent</p>
+                <p><strong>Serving Temp:</strong> Hot</p>
+                <p class="price">$6</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
