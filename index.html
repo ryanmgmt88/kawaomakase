@@ -3,317 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAWA Omakase</title>
-    <!-- Adding Google Fonts for the menu -->
+    
+    <!-- Title and Meta Description for SEO -->
+    <title>Best Omakase in East Village | KAWA Omakase NYC</title>
+    <meta name="description" content="Experience premium yet affordable omakase in East Village, NYC. Enjoy a curated tasting menu at KAWA Omakase for just $75. Reserve your seat today.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kawaomakase.com/">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="KAWA Omakase - East Village, NYC">
+    <meta property="og:description" content="Premium $75 omakase experience in Manhattan’s East Village. Fresh fish, intimate vibes, and seasonal flavors.">
+    <meta property="og:image" content="https://kawaomakase.com/og-image.jpg">
+    <meta property="og:url" content="https://kawaomakase.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KAWA Omakase NYC">
+    <meta name="twitter:description" content="Premium $75 omakase experience in East Village. Limited seats. Book now.">
+    <meta name="twitter:image" content="https://kawaomakase.com/og-image.jpg">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display&display=swap" rel="stylesheet">
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body, html {
-            height: 100%;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
-        
-        /* Full-screen background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('airam-dato-on-WMjCjmkGL2k-unsplash.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            z-index: -1;
-        }
-        
-        /* Navigation */
-        .navigation {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-        
-        .menu {
-            list-style: none;
-        }
-        
-        .menu li {
-            margin: 20px 0;
-        }
-        
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: opacity 0.3s ease;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            display: inline-block;
-            padding: 10px 20px;
-        }
-        
-        .menu a:hover {
-            opacity: 0.7;
-        }
-        
-        /* Special styling for the reservation link */
-        .reserve-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: rgba(0, 0, 0, 0.3);
-            border: 2px solid white;
-            border-radius: 4px;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: opacity 0.3s ease;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-        
-        .reserve-link:hover, .reserve-link:active {
-            background-color: rgba(255, 255, 255, 0.2);
-            opacity: 0.7;
-        }
 
-        /* Info page styles */
-        .info-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 100;
-            overflow-y: auto;
-        }
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "KAWA Omakase",
+      "image": "https://kawaomakase.com/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "37 E 1st St",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10003",
+        "addressCountry": "US"
+      },
+      "telephone": "+13476193346",
+      "priceRange": "$$",
+      "servesCuisine": "Japanese",
+      "url": "https://kawaomakase.com",
+      "menu": "https://kawaomakase.com#menu",
+      "acceptsReservations": "True"
+    }
+    </script>
 
-        .info-content {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            color: white;
-            text-align: center;
-        }
-
-        .info-content h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .info-content p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .map-container {
-            margin: 30px 0;
-            height: 300px;
-            width: 100%;
-        }
-
-        .info-content .contact {
-            margin-top: 30px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-        }
-        
-        /* Menu popup container */
-        .menu-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 100;
-            overflow-y: auto;
-        }
-        
-        .menu-content {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #f8f8f8;
-            color: #333;
-            text-align: center;
-            font-family: 'EB Garamond', serif;
-        }
-        
-        .menu-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .menu-content ul {
-            list-style: none;
-            padding: 0;
-            font-size: 1.2em;
-        }
-        
-        .menu-content li {
-            padding: 5px 0;
-        }
-        
-        .menu-content p {
-            font-size: 0.9em;
-            margin-top: 20px;
-            color: #777;
-        }
-  
-        .map-container iframe {
-            width: 100%; /* Takes up full width of .map-container */
-            height: 100%; /* Matches the 300px height of .map-container */
-        }
-        
-        /* Media query for devices with a max width of 768px (tablets and below) */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 24px; /* Smaller logo font size */
-            }
-
-            .menu a {
-                font-size: 16px; /* Smaller menu font size */
-            }
-
-            .menu-content h1 {
-                font-size: 2em; /* Smaller menu heading font size */
-            }
-
-            .menu-content ul {
-                font-size: 1em; /* Smaller menu item font size */
-            }
-
-            .info-content h2 {
-                font-size: 20px; /* Smaller info heading font size */
-            }
-
-            .info-content p {
-                font-size: 14px; /* Smaller info paragraph font size */
-            }
-            .map-container {
-                height: 200px;
-            }
-            
-            /* For mobile touch target size */
-            .menu a {
-                padding: 12px 20px;
-            }
-            
-            .reserve-link {
-                font-size: 16px;
-                padding: 12px 20px;
-            }
-        }
-
-        /* Media query for devices with a max width of 480px (mobile phones) */
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 18px; /* Even smaller logo font size */
-            }
-
-            .menu a {
-                font-size: 14px; /* Even smaller menu font size */
-                /* Larger touch area for mobile */
-                padding: 15px 25px;
-                display: inline-block;
-                width: 200px;
-                max-width: 80vw;
-            }
-            
-            .reserve-link {
-                font-size: 14px;
-                padding: 15px 25px;
-                display: inline-block;
-                width: 200px;
-                max-width: 80vw;
-            }
-
-            .menu-content h1 {
-                font-size: 1.8em; /* Even smaller menu heading font size */
-            }
-
-            .menu-content ul {
-                font-size: 0.9em; /* Even smaller menu item font size */
-            }
-
-            .info-content h2 {
-                font-size: 18px; /* Even smaller info heading font size */
-            }
-
-            .info-content p {
-                font-size: 12px; /* Even smaller info paragraph font size */
-                
-            }
-            .map-container {
-                height: 150px;
-            }
-        }
-        /* Enhancing the menu's visual appeal */
-        .menu-content li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee; /* Add a subtle divider */
-        }
-
-        .menu-content strong { /* Style the fish names */
-            font-family: 'Playfair Display', serif;
-        }
-    </style>
 </head>
 <body>
     <!-- Full-screen background image -->
-    <div class="background"></div>
+    <div class="background">
+        <!-- Hidden image for SEO purposes -->
+        <img src="airam-dato-on-WMjCjmkGL2k-unsplash.jpg" alt="Omakase counter with chef preparing sushi" style="display: none;">
+    </div>
     
     <!-- Centered navigation -->
-    <div class="navigation">
+    <header class="navigation">
         <div class="logo">KAWA OMAKASE</div>
         <ul class="menu">
             <li><a href="#" id="menu-link">MENU</a></li>
             <li><a href="#" id="info-link">INFO</a></li>
             <li><a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" class="reserve-link">RESERVE</a></li>
         </ul>
-    </div>
+    </header>
 
     <!-- Menu popup section -->
     <div id="menu-container" class="menu-container" aria-hidden="true">
         <button class="close-btn" id="close-menu" aria-label="Close Menu" tabindex="0">×</button>
         <div class="menu-content">
-            <h1>KAWA OMAKASE Tasting Menu</h1>
+            <h1>KAWA Omakase Tasting Menu</h1>
             <ul>
                 <li><strong>1 Appetizer</strong></li>
                 <li><strong>10 Nigiri</strong></li>
