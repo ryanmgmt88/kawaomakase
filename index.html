@@ -345,8 +345,95 @@
         </div>
     </section>
 
-    <!-- Info popup section -->
+  <!-- Info popup section -->
     <section id="info-container" class="info-container">
         <button class="close-btn" id="close-info" aria-label="Close Info" tabindex="0">×</button>
         <div class="info-content">
-            <h1>KAWA Omak
+            <h2>About KAWA Omakase</h2>
+            <p>Located in the heart of New York City, KAWA Omakase offers an intimate dining experience with a focus on authentic Japanese omakase. Our chefs craft each dish with precision, using the freshest seasonal ingredients.</p>
+            <p>37 E 1st St, New York, NY 10003</p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7342069979472!2d-73.99025739999999!3d40.723867299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259fe8e568467%3A0x5acc51155ce0d14b!2sKawa%20Omakase!5e0!3m2!1sen!2sus!4v1740674391480!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="KAWA Omakase Location Map"></iframe>
+            </div>
+            
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:+13476193346">(347) 619-3346</a></p>
+                <p>Email: <a href="mailto:kawaomakase37@gmail.com">kawaomakase37@gmail.com</a></p>
+                <p>Hours: Tue-Sun 5:00pm-11:00pm</p>
+                <p>Closed on Mondays</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "KAWA Omakase",
+        "description": "Authentic Japanese omakase dining in New York, NY, featuring a seasonal tasting menu with premium sushi and nigiri.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "37 E 1st St",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "10003",
+            "addressCountry": "US"
+        },
+        "telephone": "+13476193346",
+        "email": "kawaomakase37@gmail.com",
+        "openingHours": [
+            "Tu-Su 17:00-23:00"
+        ],
+        "servesCuisine": "Japanese",
+        "url": "https://www.kawaomakase.com/",
+        "image": "https://www.kawaomakase.com/images/airam-dato-on-WMjCjmkGL2k-unsplash.jpg",
+        "priceRange": "$$$",
+        "acceptsReservations": "Yes",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.723867,
+            "longitude": -73.990257
+        }
+    }
+    </script>
+
+    <script>
+        // Menu popup functionality
+        document.getElementById('menu-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('menu-container').style.display = 'block';
+            document.getElementById('menu-container').setAttribute('aria-hidden', 'false');
+        });
+        
+        document.getElementById('close-menu').addEventListener('click', function() {
+            document.getElementById('menu-container').style.display = 'none';
+            document.getElementById('menu-container').setAttribute('aria-hidden', 'true');
+        });
+        
+        // Info popup functionality
+        document.getElementById('info-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('info-container').style.display = 'block';
+            document.getElementById('info-container').setAttribute('aria-hidden', 'false');
+        });
+        
+        document.getElementById('close-info').addEventListener('click', function() {
+            document.getElementById('info-container').style.display = 'none';
+            document.getElementById('info-container').setAttribute('aria-hidden', 'true');
+        });
+
+        // Close popups with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('menu-container').style.display = 'none';
+                document.getElementById('info-container').style.display = 'none';
+                document.getElementById('menu-container').setAttribute('aria-hidden', 'true');
+                document.getElementById('info-container').setAttribute('aria-hidden', 'true');
+            }
+        });
+    </script>
+</body>
+</html>
