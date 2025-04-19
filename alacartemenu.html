@@ -3,38 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kawa Omakase | A La Carte Menu</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>A La Carte Menu | Kawa Omakase</title>
+  <link rel="stylesheet" href="../style.css" /> <!-- adjust path if needed -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .menu-title {
+      padding: 50px 20px 10px;
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      color: #555;
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .menu-section {
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+      font-size: 1rem;
+    }
+
+    .menu-item span:first-child {
+      font-weight: 500;
+    }
+
+    .menu-item span:last-child {
+      color: #444;
+    }
+
+    /* Optional: make menu stand out slightly */
+    .menu-container {
+      background: white;
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 50px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="Kawa Omakase Logo" class="logo" />
-    <h1>Kawa Omakase</h1>
-    <h2>A La Carte Menu</h2>
 
-    <ul class="menu">
-      <li><span>A5 Wagyu</span><span>$18</span></li>
-      <li><span>A5 Wagyu Uni</span><span>$25</span></li>
-      <li><span>Kawa Special</span><span>$25</span></li>
-      <li><span>Uni Handroll (Hokkaido)</span><span>$25</span></li>
-      <li><span>Uni (Hokkaido)</span><span>$18</span></li>
-      <li><span>Scallop Uni</span><span>$15</span></li>
-      <li><span>Aji (Horse Mackerel)</span><span>$10</span></li>
-      <li><span>Kinmedai (Golden Eye Snapper)</span><span>$12</span></li>
-      <li><span>Kanpachi (Ambarjak)</span><span>$9</span></li>
-      <li><span>Madai</span><span>$8</span></li>
-      <li><span>Chutoro</span><span>$10</span></li>
-      <li><span>Hamachi</span><span>$9</span></li>
-      <li><span>Tuna Truffle</span><span>$10</span></li>
-      <li><span>Shima Aji</span><span>$9</span></li>
-      <li><span>Salmon Tomato</span><span>$10</span></li>
-      <li><span>Ikura</span><span>$8</span></li>
-      <li><span>Botan Ebi</span><span>$8</span></li>
-      <li><span>Otoro Toro Caviar</span><span>$18</span></li>
-      <li><span>Unagi</span><span>$18</span></li>
-      <li><span>Torst</span><span>$18</span></li>
-    </ul>
+
+
+  <header>
+    <div>A La Carte Menu</div>
+  </header>
+
+  <div class="menu-container">
+    <h1 class="menu-title">Kawa Omakase</h1>
+    <p class="subtitle">A La Carte Selection</p>
+
+    <div class="menu-section">
+      <div class="menu-item"><span>A5 Wagyu</span><span>$18</span></div>
+      <div class="menu-item"><span>A5 Wagyu Uni</span><span>$25</span></div>
+      <div class="menu-item"><span>Kawa Special</span><span>$25</span></div>
+      <div class="menu-item"><span>Uni Handroll (Hokkaido)</span><span>$25</span></div>
+      <div class="menu-item"><span>Uni (Hokkaido)</span><span>$18</span></div>
+      <div class="menu-item"><span>Scallop Uni</span><span>$15</span></div>
+      <div class="menu-item"><span>Aji (Horse Mackerel)</span><span>$10</span></div>
+      <div class="menu-item"><span>Kinmedai (Golden Eye Snapper)</span><span>$12</span></div>
+      <div class="menu-item"><span>Kanpachi (Amberjack)</span><span>$9</span></div>
+      <div class="menu-item"><span>Madai</span><span>$8</span></div>
+      <div class="menu-item"><span>Chutoro</span><span>$10</span></div>
+      <div class="menu-item"><span>Hamachi</span><span>$9</span></div>
+      <div class="menu-item"><span>Tuna Truffle</span><span>$10</span></div>
+      <div class="menu-item"><span>Shima Aji</span><span>$9</span></div>
+      <div class="menu-item"><span>Salmon Tomato</span><span>$10</span></div>
+      <div class="menu-item"><span>Ikura</span><span>$8</span></div>
+      <div class="menu-item"><span>Botan Ebi</span><span>$8</span></div>
+      <div class="menu-item"><span>Otoro Toro Caviar</span><span>$18</span></div>
+      <div class="menu-item"><span>Unagi</span><span>$18</span></div>
+      <div class="menu-item"><span>Torst</span><span>$18</span></div>
+    </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Kawa Omakase. All rights reserved.</p>
+  </footer>
 </body>
 </html>
