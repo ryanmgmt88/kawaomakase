@@ -22,23 +22,6 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
         }
         
-        /* Header for logo */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-            z-index: 10;
-        }
-
-        .site-logo {
-            width: 150px;
-            height: auto;
-            display: block;
-        }
-
         /* Full-screen background */
         .background {
             position: fixed;
@@ -163,10 +146,6 @@
         
         /* Media query for devices with a max width of 768px (tablets and below) */
         @media (max-width: 768px) {
-            .site-logo {
-                width: 120px;
-            }
-
             .logo {
                 font-size: 24px;
             }
@@ -194,10 +173,6 @@
 
         /* Media query for devices with a max width of 480px (mobile phones) */
         @media (max-width: 480px) {
-            .site-logo {
-                width: 100px;
-            }
-
             .logo {
                 font-size: 18px;
             }
@@ -228,11 +203,6 @@
     </style>
 </head>
 <body>
-    <!-- Header with Logo -->
-    <header>
-        <img src="logo.png" alt="KAWA Omakase Logo" class="site-logo">
-    </header>
-
     <!-- Full-screen background image -->
     <div class="background">
         <img src="background.png" alt="KAWA Omakase dining ambiance" style="display: none;">
