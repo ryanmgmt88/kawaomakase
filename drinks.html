@@ -11,59 +11,39 @@
       font-family: 'Helvetica', sans-serif;
       background-color: #FFFFFF;
       margin: 0;
-      padding: 0 20px;
+      padding: 40px 20px;
       color: #000000;
-    }
-
-    /* Minimal Sticky Navigation */
-    .top-nav {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: white;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .top-nav a {
-      font-size: 1em;
-      font-weight: 600;
-      color: #000;
-      text-decoration: none;
-      padding: 6px 10px;
-      border-radius: 6px;
-      opacity: 0.8;
-    }
-
-    .top-nav a:hover {
-      opacity: 1;
-      background: #f4f4f4;
     }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding-top: 20px;
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 2.2em;
       font-weight: 700;
       text-align: center;
       text-transform: uppercase;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      color: #000000;
     }
 
     h2 {
-      font-size: 1.7em;
-      font-weight: 800;
+      font-size: 2.0em;
+      font-weight: 700;
       text-transform: uppercase;
-      text-align: center;
+      color: #000000;
       margin: 60px 0 40px;
-      color: #000;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      color: #000000;
     }
 
     .menu-item {
@@ -85,16 +65,9 @@
       flex: 1;
     }
 
-    .menu-details h3 {
-      font-size: 1.3em;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin: 0 0 10px;
-    }
-
     .category {
       display: inline-block;
-      font-size: 1em;
+      font-size: 1.0em;
       font-weight: 700;
       color: #F5A623;
       border: 2px solid #F5A623;
@@ -105,159 +78,495 @@
 
     .description {
       font-size: 1em;
-      color: #666;
+      color: #666666;
       line-height: 1.6;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .flavor-notes {
       display: flex;
-      gap: 18px;
+      gap: 20px;
       margin-bottom: 20px;
-      flex-wrap: wrap;
     }
 
     .flavor-notes span {
-      font-size: 0.95em;
-      color: #666;
+      font-size: 0.9em;
+      color: #666666;
       text-transform: capitalize;
+    }
+
+    .details-list {
+      font-size: 0.9em;
+      color: #666666;
     }
 
     .details-list p {
       margin: 5px 0;
       display: flex;
       justify-content: space-between;
-      font-size: 0.95em;
-      color: #666;
-      border-bottom: 1px dotted #DDD;
+      border-bottom: 1px dotted #E5E5E5;
       padding-bottom: 5px;
     }
 
     .price {
       font-size: 1.2em;
       font-weight: 700;
+      color: #000000;
       margin-top: 20px;
     }
 
-    /* Mobile Optimization */
+
+    /* ============================================================
+       MOBILE OPTIMIZED LAYOUT
+       ============================================================ */
     @media (max-width: 768px) {
-      body {
-        padding: 0 10px;
+
+      h2 {
+        font-size: 1.8em;
+        margin: 40px 0 25px;
       }
 
       .menu-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-bottom: 30px;
       }
 
       .menu-item img {
-        width: 70%;
+        width: 200px;
         height: auto;
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin: 0 0 20px 0;
+      }
+
+      .category {
+        font-size: 1em;
+        padding: 6px 12px;
+        margin: 5px auto 10px auto;
+        display: inline-block;
       }
 
       .flavor-notes {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
       }
 
-      h2 {
-        font-size: 1.5em;
+      .details-list p {
+        font-size: 1em;
+        padding: 5px 0;
       }
 
-      .top-nav {
-        gap: 10px;
-        padding: 8px 0;
-      }
-
-      .top-nav a {
-        font-size: 0.9em;
-        padding: 4px 8px;
+      .price {
+        font-size: 1.3em;
+        margin-top: 15px;
       }
     }
   </style>
 </head>
 
+
 <body>
-
-  <!-- Sticky Minimal Navigation -->
-  <div class="top-nav">
-    <a href="#usa">USA</a>
-    <a href="#japan">Japan</a>
-    <a href="#beer">Beer</a>
-    <a href="#beverages">Beverages</a>
-  </div>
-
   <div class="container">
-
     <h1>Sake & Beverage Selection</h1>
 
-    <!-- USA Section -->
-    <h2 id="usa">Sake Brewed in USA</h2>
 
-    <!-- Dassai Blue 50 -->
-    <div class="menu-item">
-      <img src="images/dassai-blue-50.jpg" alt="Dassai Blue 50">
-      <div class="menu-details">
-        <h3>Dassai Blue 50 Junmai Daiginjo</h3>
-        <div class="category">Brewed in Hyde Park, New York</div>
-        <p class="description">Soft melon and pineapple aromatics with gentle sweetness and a smooth, elegant finish.</p>
-        <div class="flavor-notes">
-          <span>Melon</span><span>Pineapple</span><span>Soft Sweetness</span>
+    <!-- ========================================= -->
+    <!-- SAKE BREWED IN USA -->
+    <!-- ========================================= -->
+    <h2>Sake Brewed in USA</h2>
+    <div class="menu-flow">
+
+      <!-- Dassai Blue 50 -->
+      <div class="menu-item">
+        <img src="images/dassai-blue-50-720ml.jpg" alt="Dassai Blue 50 Junmai Daiginjo">
+        <div class="menu-details">
+
+          <h3>Dassai Blue 50 Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+          <div class="category">Brewed in Hyde Park, New York</div>
+
+          <p class="description">
+            A clean and modern sake brewed at Dassai’s Hudson Valley brewery. Soft melon and pineapple notes,
+            gentle sweetness, and a smooth refreshing finish.
+          </p>
+
+          <div class="flavor-notes">
+            <span>Melon</span><span>Pineapple</span><span>Soft Sweetness</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Hyde Park, New York</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
+            <p><span>Alcohol Content</span><strong>14%</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$70 (720ml) | $35 (375ml)</p>
         </div>
-        <div class="details-list">
-          <p><span>Origin</span><strong>Hyde Park, New York</strong></p>
-          <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
-          <p><span>Alcohol Content</span><strong>14%</strong></p>
-          <p><span>Serving Temp</span><strong>Chilled</strong></p>
-        </div>
-        <p class="price">$85 (720ml) | $45 (375ml)</p>
       </div>
+
+
+      <!-- Dassai Blue 35 -->
+      <div class="menu-item">
+        <img src="images/dassai-blue-35-375ml.jpg" alt="Dassai Blue 35 Junmai Daiginjo">
+        <div class="menu-details">
+
+          <h3>Dassai Blue 35 Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+          <div class="category">Brewed in Hyde Park, New York</div>
+
+          <p class="description">
+            Refined to an impressive 35% polish. Elegant melon and floral aromas with a silky,
+            smooth finish. Beautiful balance of sweetness and purity.
+          </p>
+
+          <div class="flavor-notes">
+            <span>Melon</span><span>Floral</span><span>Silky Finish</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Hyde Park, New York</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>35%</strong></p>
+            <p><span>Alcohol Content</span><strong>14%</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$48 (375ml)</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Dassai Blue 35 -->
-    <div class="menu-item">
-      <img src="images/dassai-blue-35.jpg" alt="Dassai Blue 35">
-      <div class="menu-details">
-        <h3>Dassai Blue 35 Junmai Daiginjo</h3>
-        <div class="category">Brewed in Hyde Park, New York</div>
-        <p class="description">Elegant floral and melon aromas with a silky refined body and lingering finish.</p>
-        <div class="flavor-notes">
-          <span>Melon</span><span>Floral</span><span>Silky Finish</span>
+
+
+
+    <!-- ========================================= -->
+    <!-- SAKE FROM JAPAN -->
+    <!-- ========================================= -->
+    <h2>Sake From Japan</h2>
+    <div class="menu-flow">
+
+      <!-- Dassai 45 -->
+      <div class="menu-item">
+        <img src="images/dassai-45-720ml.jpg" alt="Dassai 45">
+        <div class="menu-details">
+          <h3>Dassai 45 Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+
+          <p class="description">Chewy, full-bodied sake with honeydew aromas and muscat sweetness balanced by crisp dryness.</p>
+
+          <div class="flavor-notes">
+            <span>Honeydew</span><span>Mandarin</span><span>Blossom</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Yamaguchi, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>45%</strong></p>
+            <p><span>SMV</span><strong>+3</strong></p>
+            <p><span>Acidity</span><strong>1.4</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$70 (720ml) | $35 (300ml)</p>
         </div>
-        <div class="details-list">
-          <p><span>Origin</span><strong>Hyde Park, New York</strong></p>
-          <p><span>Rice Polishing Ratio</span><strong>35%</strong></p>
-          <p><span>Alcohol Content</span><strong>14%</strong></p>
-          <p><span>Serving Temp</span><strong>Chilled</strong></p>
-        </div>
-        <p class="price">$65 (375ml)</p>
       </div>
+
+
+      <!-- Dassai 39 -->
+      <div class="menu-item">
+        <img src="images/dassai-39-720ml.jpg" alt="Dassai 39">
+        <div class="menu-details">
+          <h3>Dassai 39 Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+
+          <p class="description">Soft, elegant aromas of melon, peach, and white flowers. Smooth silky texture, clean finish.</p>
+
+          <div class="flavor-notes">
+            <span>Melon</span><span>Peach</span><span>Floral</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Yamaguchi, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>39%</strong></p>
+            <p><span>Alcohol Content</span><strong>16%</strong></p>
+            <p><span>SMV</span><strong>+3</strong></p>
+            <p><span>Acidity</span><strong>1.3</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$105 (720ml) | $48 (300ml)</p>
+        </div>
+      </div>
+
+
+      <!-- Dassai 23 -->
+      <div class="menu-item">
+        <img src="images/dassai-23-300ml.jpg" alt="Dassai 23">
+        <div class="menu-details">
+
+          <h3>Dassai 23 Junmai Daiginjo (300ml)</h3>
+          <div class="category">Junmai Daiginjo</div>
+
+          <p class="description">Ultra-premium sake polished to 23%. Silky, elegant, floral, clean lingering finish.</p>
+
+          <div class="flavor-notes">
+            <span>Elegant</span><span>Silky</span><span>Floral</span><span>Refined Sweetness</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Yamaguchi, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>23%</strong></p>
+            <p><span>Alcohol Content</span><strong>16%</strong></p>
+            <p><span>SMV</span><strong>+4</strong></p>
+            <p><span>Acidity</span><strong>1.3</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$75 (300ml)</p>
+        </div>
+      </div>
+
+
+      <!-- Kubota Junmai Daiginjo -->
+      <div class="menu-item">
+        <img src="images/kubota-720ml.jpg" alt="Kubota Junmai Daiginjo">
+        <div class="menu-details">
+          <h3>Kubota Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+          <p class="description">Refined sake with delicate pear and apple notes. Light, clean, refreshing.</p>
+
+          <div class="flavor-notes">
+            <span>Pear</span><span>Apple</span><span>Clean Finish</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Niigata, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
+            <p><span>SMV</span><strong>+2</strong></p>
+            <p><span>Acidity</span><strong>1.3</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$78 (720ml) | $38 (300ml)</p>
+        </div>
+      </div>
+
+
+      <!-- Kubota Manjyu -->
+      <div class="menu-item">
+        <img src="images/kubota-manjyu-720ml.jpg" alt="Kubota Manjyu">
+        <div class="menu-details">
+          <h3>Kubota Manjyu Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+          <p class="description">Elegant and refined. Melon and pear aromas, smooth silky body, pristine finish.</p>
+
+          <div class="flavor-notes">
+            <span>Melon</span><span>Pear</span><span>Silky Finish</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Niigata, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
+            <p><span>Alcohol Content</span><strong>15%</strong></p>
+            <p><span>SMV</span><strong>+2</strong></p>
+            <p><span>Acidity</span><strong>1.2</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$145 (720ml)</p>
+        </div>
+      </div>
+
+      <!-- Hakkaisan 45 -->
+      <div class="menu-item">
+        <img src="images/hakkaisan-45-300ml.jpg" alt="Hakkaisan 45">
+        <div class="menu-details">
+          <h3>Hakkaisan 45 Junmai Daiginjo</h3>
+          <div class="category">Junmai Daiginjo</div>
+          <p class="description">Delicate steamed rice aroma with a gentle floral note and pristine dry finish.</p>
+
+          <div class="flavor-notes">
+            <span>Steamed Rice</span><span>Floral</span><span>Earthy</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Niigata, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>45%</strong></p>
+            <p><span>Alcohol Content</span><strong>16%</strong></p>
+            <p><span>SMV</span><strong>+5</strong></p>
+            <p><span>Acidity</span><strong>1.2</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$89 (720ml) | $42 (300ml)</p>
+        </div>
+      </div>
+
+
+      <!-- Hakkaisan 8Y Snow -->
+      <div class="menu-item">
+        <img src="images/hakkaisan-yukimuro-8yr.jpg" alt="Hakkaisan 8 Year Snow Aged">
+        <div class="menu-details">
+          <h3>Hakkaisan Yukimuro Snow Aged 8 Years</h3>
+          <div class="category">Junmai Daiginjo</div>
+
+          <p class="description">Rare sake aged eight years in snow. Deep umami, velvety smooth texture, elegant finish.</p>
+
+          <div class="flavor-notes">
+            <span>Umami</span><span>Velvety</span><span>Elegant Finish</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Niigata, Japan</strong></p>
+            <p><span>Rice Polishing Ratio</span><strong>40%</strong></p>
+            <p><span>Alcohol Content</span><strong>17%</strong></p>
+            <p><span>Aging</span><strong>8 Years</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled</strong></p>
+          </div>
+
+          <p class="price">$230 (720ml)</p>
+        </div>
+      </div>
+
+
+      <!-- Nihon Sakari Yuzu -->
+      <div class="menu-item">
+        <img src="images/nihon-sakari-yuzu.jpg" alt="Nihon Sakari Yuzu">
+        <div class="menu-details">
+          <h3>Nihon Sakari Yuzu</h3>
+          <div class="category">Yuzushu</div>
+
+          <p class="description">Bright, citrusy yuzu sake with a sweet-tart refreshing finish.</p>
+
+          <div class="flavor-notes">
+            <span>Yuzu Citrus</span><span>Sweet</span><span>Tart</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Hyogo, Japan</strong></p>
+            <p><span>Type</span><strong>Yuzushu</strong></p>
+            <p><span>Alcohol Content</span><strong>10%</strong></p>
+            <p><span>Serving Temp</span><strong>Chilled / Rocks</strong></p>
+          </div>
+
+          <p class="price">$76 (700ml) | $32 (300ml)</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Japan Section -->
-    <h2 id="japan">Sake From Japan</h2>
 
-    <!-- You keep all your original Japanese sake items here -->
-    <!-- (Not repeating them here unless you want everything merged again.) -->
 
-    <!-- Beer Section -->
-    <h2 id="beer">Beer</h2>
 
-    <!-- ... your beer items here ... -->
+    <!-- ======================== -->
+    <!-- BEER -->
+    <!-- ======================== -->
+    <h2>Beer</h2>
+    <div class="menu-flow">
 
-    <!-- Beverage Section -->
-    <h2 id="beverages">Beverages</h2>
+      <div class="menu-item">
+        <img src="images/sapporo-premium-12oz.jpg" alt="Sapporo Premium">
+        <div class="menu-details">
+          <h3>Sapporo Premium Beer (12 Oz)</h3>
+          <div class="category">Lager</div>
+          <p class="description">Crisp, refined lager with a clean finish.</p>
 
-    <!-- ... your beverage items ... -->
+          <div class="flavor-notes">
+            <span>Crisp</span><span>Refined</span><span>Clean Finish</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>USA</strong></p>
+            <p><span>ABV</span><strong>4.9%</strong></p>
+            <p><span>Calories</span><strong>140</strong></p>
+            <p><span>Carbs</span><strong>10.3g</strong></p>
+          </div>
+
+          <p class="price">$8</p>
+        </div>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="images/kirin-ichiban-12oz.jpg" alt="Kirin Ichiban">
+        <div class="menu-details">
+          <h3>Kirin Ichiban Premium Beer (12 Oz)</h3>
+          <div class="category">Lager</div>
+          <p class="description">Smooth, clean lager brewed using a first-press method.</p>
+
+          <div class="flavor-notes">
+            <span>Smooth</span><span>Clean</span><span>Mild Malt</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>USA</strong></p>
+            <p><span>ABV</span><strong>5.0%</strong></p>
+            <p><span>Calories</span><strong>145</strong></p>
+            <p><span>Carbs</span><strong>10g</strong></p>
+          </div>
+
+          <p class="price">$10</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- ======================== -->
+    <!-- OTHER BEVERAGES -->
+    <!-- ======================== -->
+    <h2>Beverages</h2>
+    <div class="menu-flow">
+
+      <div class="menu-item">
+        <img src="images/saratoga-sparkling-water.jpg" alt="Saratoga Water">
+        <div class="menu-details">
+
+          <h3>Saratoga Sparkling Water (12 Oz)</h3>
+          <div class="category">Sparkling Water</div>
+
+          <p class="description">Premium sparkling water with crisp fine bubbles.</p>
+
+          <div class="flavor-notes">
+            <span>Crisp</span><span>Refreshing</span><span>Fine Bubbles</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Saratoga Springs, USA</strong></p>
+            <p><span>Since</span><strong>1872</strong></p>
+          </div>
+
+          <p class="price">$5.5</p>
+        </div>
+      </div>
+
+
+      <div class="menu-item">
+        <img src="images/green-tea.jpg" alt="Green Tea">
+        <div class="menu-details">
+          <h3>Hot Green Tea</h3>
+          <div class="category">Sencha Green Tea</div>
+
+          <p class="description">Traditional Japanese green tea with fresh grassy flavor.</p>
+
+          <div class="flavor-notes">
+            <span>Fresh</span><span>Grassy</span><span>Slightly Astringent</span>
+          </div>
+
+          <div class="details-list">
+            <p><span>Origin</span><strong>Japan</strong></p>
+            <p><span>Type</span><strong>Sencha</strong></p>
+            <p><span>Serving Temp</span><strong>Hot</strong></p>
+          </div>
+
+          <p class="price">$4</p>
+        </div>
+      </div>
+
+    </div>
 
   </div>
-
-  <!-- Smooth Scroll -->
-  <script>
-    document.documentElement.style.scrollBehavior = "smooth";
-  </script>
-
 </body>
 </html>
