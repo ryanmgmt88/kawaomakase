@@ -1,304 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience authentic omakase at KAWA Omakase in NYC. Savor a seasonal tasting menu with fresh nigiri, handrolls, and more at our East Village location. Book now!">
-    <meta name="keywords" content="omakase NYC, KAWA Omakase, Japanese restaurant New York, sushi East Village, omakase tasting menu">
-    <meta name="robots" content="index, follow">
-    <title>KAWA Omakase - Authentic Omakase Dining in NYC</title>
-    <!-- Adding Google Fonts for the menu -->
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display&display=swap" rel="stylesheet">
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body, html {
-            height: 100%;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
-        
-        /* Full-screen background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('airam-dato-on-WMjCjmkGL2k-unsplash.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            z-index: -1;
-        }
-        
-        /* Navigation */
-        .navigation {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: white;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-        
-        .menu {
-            list-style: none;
-        }
-        
-        .menu li {
-            margin: 20px 0;
-        }
-        
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: opacity 0.3s ease;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            display: inline-block;
-            padding: 10px 20px;
-        }
-        
-        .menu a:hover {
-            opacity: 0.7;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experience authentic Japanese omakase at KAWA Omakase in NYC. A seasonal $88 tasting menu by Chef Tony in the East Village. Reservations required.">
+  <meta name="keywords" content="omakase NYC, KAWA Omakase, East Village sushi, Chef Tony omakase, Japanese tasting menu">
+  <meta name="robots" content="index, follow">
+  <title>KAWA Omakase | East Village Omakase by Chef Tony</title>
 
-        /* Info page styles */
-        .info-container {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 100;
-            overflow-y: auto;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-        .info-content {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            color: white;
-            text-align: center;
-        }
-
-        .info-content h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .info-content h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .info-content p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .map-container {
-            margin: 30px 0;
-            height: 300px;
-            width: 100%;
-        }
-
-        .info-content .contact {
-            margin-top: 30px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-        }
-        
-        /* Media query for devices with a max width of 768px (tablets and below) */
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 24px;
-            }
-
-            .menu a {
-                font-size: 16px;
-                padding: 12px 20px;
-            }
-
-            .info-content h1 {
-                font-size: 24px;
-            }
-
-            .info-content h2 {
-                font-size: 20px;
-            }
-
-            .info-content p {
-                font-size: 14px;
-            }
-            .map-container {
-                height: 200px;
-            }
-        }
-
-        /* Media query for devices with a max width of 480px (mobile phones) */
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 18px;
-            }
-
-            .menu a {
-                font-size: 14px;
-                padding: 15px 25px;
-                display: inline-block;
-                width: 200px;
-                max-width: 80vw;
-            }
-
-            .info-content h1 {
-                font-size: 20px;
-            }
-
-            .info-content h2 {
-                font-size: 18px;
-            }
-
-            .info-content p {
-                font-size: 12px;
-            }
-            .map-container {
-                height: 150px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Full-screen background image -->
-    <div class="background">
-        <img src="airam-dato-on-WMjCjmkGL2k-unsplash.jpg" alt="KAWA Omakase dining ambiance" style="display: none;">
-    </div>
-    
-    <!-- Centered navigation -->
-    <div class="navigation">
-        <div class="logo">KAWA OMAKASE</div>
-        <nav>
-            <ul class="menu">
-                <li><a href="Kawa_Omakase_Menu_Final_Print.pdf" target="_blank" rel="noopener">Menu</a></li>
-                <li><a href="#info" id="info-link">Info</a></li>
-                <li><a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank" rel="noopener">Reserve</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <!-- Info popup section -->
-    <section id="info-container" class="info-container">
-        <button class="close-btn" id="close-info" aria-label="Close Info" tabindex="0">×</button>
-        <div class="info-content">
-            <h2>About KAWA Omakase</h2>
-            <p>Located in the heart of New York City, KAWA Omakase offers an intimate dining experience with a focus on authentic Japanese omakase. Our chefs craft each dish with precision, using the freshest seasonal ingredients.</p>
-            <p>37 E 1st St, New York, NY 10003</p>
-            
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7342069979472!2d-73.99025739999999!3d40.723867299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259fe8e568467%3A0x5acc51155ce0d14b!2sKawa%20Omakase!5e0!3m2!1sen!2sus!4v1740674391480!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="KAWA Omakase Location Map"></iframe>
-            </div>
-            
-            <div class="contact">
-                <h3>Contact Us</h3>
-                <p>Phone: (347) 619-3346</p>
-                <p>Email: kawaomakase37@gmail.com</p>
-                <p>Store Hours</p>
-                <p>Monday: Closed</p>
-                <p>Tuesday – Thursday: 5:00 PM – 10:00 PM</p>
-                <p>Friday & Saturday: 5:00 PM – 11:00 PM</p>
-                <p>Sunday: 5:00 PM – 10:00 PM</p> 
-            </div>
-        </div>
-    </section>
-
-    <!-- Schema Markup for Local Business -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "name": "KAWA Omakase",
-        "description": "Authentic Japanese omakase dining in New York, NY, featuring a seasonal tasting menu with premium sushi and nigiri.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "37 E 1st St",
-            "addressLocality": "New York",
-            "addressRegion": "NY",
-            "postalCode": "10003",
-            "addressCountry": "US"
-        },
-        "telephone": "+13476193346",
-        "email": "kawaomakase37@gmail.com",
-        "openingHours": [
-            "Tu-Su 17:00-23:00"
-        ],
-        "servesCuisine": "Japanese",
-        "url": "https://www.kawaomakase.com/",
-        "image": "https://www.kawaomakase.com/images/airam-dato-on-WMjCjmkGL2k-unsplash.jpg",
-        "priceRange": "$$$",
-        "acceptsReservations": "Yes",
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 40.723867,
-            "longitude": -73.990257
-        },
-        "menu": "https://www.kawaomakase.com/Kawa_Omakase_Menu_Final_Print.pdf"
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --line:#e9e9e9;
+      --max:1100px;
     }
-    </script>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      color:var(--text);
+      background:#fff;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;width:100%}
 
-    <script>
-        // Info popup functionality
-        document.getElementById('info-link').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.getElementById('info-container').style.display = 'block';
-            document.getElementById('info-container').setAttribute('aria-hidden', 'false');
-        });
-        
-        document.getElementById('close-info').addEventListener('click', function() {
-            document.getElementById('info-container').style.display = 'none';
-            document.getElementById('info-container').setAttribute('aria-hidden', 'true');
-        });
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .brand{
+      font-family:"EB Garamond", serif;
+      letter-spacing:.18em;
+      font-size:18px;
+      text-transform:uppercase;
+    }
+    nav ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    nav a{
+      font-size:13px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .reserve{
+      border:1px solid #111;
+      padding:10px 14px;
+      border-radius:999px;
+      color:#111;
+    }
 
-        // Close popup with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.getElementById('info-container').style.display = 'none';
-                document.getElementById('info-container').setAttribute('aria-hidden', 'true');
-            }
-        });
-    </script>
+    /* Hero */
+    .hero{
+      min-height:80vh;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      padding:0 18px 50px;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15)),
+        url("images/hero-kawa.jpg") center/cover no-repeat;
+    }
+    .hero-inner{
+      position:relative;
+      max-width:var(--max);
+      margin:0 auto;
+      color:#fff;
+    }
+    h1{
+      font-family:"EB Garamond", serif;
+      font-size:44px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin:0 0 12px;
+    }
+    .sub{
+      font-size:14px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      opacity:.9;
+    }
+
+    /* Sections */
+    section{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:70px 18px;
+    }
+    .kicker{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:12px;
+    }
+    .lead{
+      font-family:"EB Garamond", serif;
+      font-size:28px;
+      margin:0 0 14px;
+    }
+    .body{
+      color:var(--muted);
+      line-height:1.75;
+      max-width:72ch;
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+    .gallery div{
+      grid-column:span 4;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--line);
+    }
+    .gallery img{
+      aspect-ratio:4/3;
+      object-fit:cover;
+    }
+
+    /* Info */
+    .info{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:30px;
+      margin-top:24px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:20px;
+    }
+    .card h3{
+      font-size:12px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin:16px 0 8px;
+    }
+    .map{
+      height:320px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--line);
+    }
+    iframe{width:100%;height:100%;border:0}
+
+    footer{
+      border-top:1px solid var(--line);
+      text-align:center;
+      padding:24px;
+      font-size:12px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    /* Responsive */
+    @media(max-width:900px){
+      h1{font-size:36px}
+      .gallery div{grid-column:span 6}
+      .info{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      h1{font-size:30px}
+      .gallery div{grid-column:span 12}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">KAWA OMAKASE</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="Kawa_Omakase_Menu_Final_Print.pdf" target="_blank">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#info">Info</a></li>
+        <li><a class="reserve" href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank">Reserve</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>KAWA OMAKASE</h1>
+      <p class="sub">Seasonal Japanese Omakase · East Village · $88 per guest · Reservations Required</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="kicker">About</p>
+    <p class="lead">An intimate omakase counter in the heart of the East Village.</p>
+    <p class="body">
+      With over 20 years of experience at celebrated New York restaurants including Catch NYC, Sushi Dojo,
+      Sushi on Jones, Akimori, and Bonito 47, Chef Tony is dedicated to crafting an unforgettable dining journey
+      that blends Japanese tradition with modern artistry.
+    </p>
+    <p class="body" style="margin-top:14px;"><strong>Chef Tony</strong></p>
+  </section>
+
+  <section id="gallery">
+    <p class="kicker">Gallery</p>
+    <p class="lead">Seasonal highlights.</p>
+    <div class="gallery">
+      <div><img src="images/gallery-1.jpg" alt=""></div>
+      <div><img src="images/gallery-2.jpg" alt=""></div>
+      <div><img src="images/gallery-3.jpg" alt=""></div>
+      <div><img src="images/gallery-4.jpg" alt=""></div>
+      <div><img src="images/gallery-5.jpg" alt=""></div>
+      <div><img src="images/gallery-6.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <section id="info">
+    <p class="kicker">Info</p>
+    <p class="lead">Visit KAWA Omakase.</p>
+
+    <div class="info">
+      <div class="card">
+        <h3>Location</h3>
+        <p>37 E 1st St, New York, NY 10003</p>
+
+        <h3>Hours</h3>
+        <p>Monday: Closed</p>
+        <p>Tue–Thu: 5:00 PM – 10:00 PM</p>
+        <p>Fri–Sat: 5:00 PM – 11:00 PM</p>
+        <p>Sunday: 5:00 PM – 10:00 PM</p>
+
+        <h3>Contact</h3>
+        <p>Phone: (347) 619-3346</p>
+        <p>Email: kawaomakase37@gmail.com</p>
+
+        <div style="margin-top:16px">
+          <a class="reserve" href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank">
+            Reserve on Resy
+          </a>
+        </div>
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7342069979472!2d-73.9902574!3d40.7238673"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 KAWA Omakase · East Village · Reservations Required
+</footer>
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"KAWA Omakase",
+  "founder":"Chef Tony",
+  "priceRange":"$$$",
+  "servesCuisine":"Japanese",
+  "telephone":"+13476193346",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"37 E 1st St",
+    "addressLocality":"New York",
+    "addressRegion":"NY",
+    "postalCode":"10003",
+    "addressCountry":"US"
+  },
+  "acceptsReservations":"Yes",
+  "menu":"https://www.kawaomakase.com/Kawa_Omakase_Menu_Final_Print.pdf"
+}
+</script>
+
 </body>
 </html>
