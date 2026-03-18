@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin or private paths if they exist
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.kawaomakase.com/sitemap.xml
