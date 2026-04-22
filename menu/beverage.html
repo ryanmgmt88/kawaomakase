@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>A La Carte Omakase Menu in East Village NYC | Kawa Omakase</title>
+  <meta name="description" content="Explore the Kawa Omakase à la carte menu in East Village, NYC, featuring premium sushi, uni, toro, wagyu, caviar, handrolls, and chef’s special selections." />
+  <meta name="keywords" content="Kawa Omakase, omakase NYC, East Village omakase, sushi East Village, wagyu sushi NYC, uni NYC, toro sushi NYC, caviar sushi NYC, handroll NYC" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Kawa Omakase" />
+
+  <meta property="og:title" content="A La Carte Menu | Kawa Omakase" />
+  <meta property="og:description" content="Premium à la carte sushi and chef’s special selections in East Village, NYC." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kawaomakase.com/menu/a-la-carte" />
+  <meta property="og:image" content="https://kawaomakase.com/images/og-menu.jpg" />
+
+  <link rel="canonical" href="https://kawaomakase.com/menu/a-la-carte" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #f6f3ee;
+      color: #1c1c1c;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    .menu-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 20px 60px;
+    }
+
+    .menu-container {
+      background: #fcfaf7;
+      border: 1px solid #e5dccd;
+      padding: 42px 28px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .menu-title {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      line-height: 1;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .menu-subtitle {
+      text-align: center;
+      margin: 10px 0 18px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #b38728;
+    }
+
+    .menu-divider {
+      width: 90px;
+      height: 2px;
+      background: #b38728;
+      margin: 0 auto 32px;
+    }
+
+    .menu-description {
+      max-width: 680px;
+      margin: 0 auto 36px;
+      text-align: center;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .section-heading {
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 12px;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .special-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 18px;
+      color: #b38728;
+      font-weight: 600;
+    }
+
+    .menu-list {
+      margin-bottom: 28px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd6ca;
+    }
+
+    .menu-item-left {
+      flex: 1;
+    }
+
+    .menu-item-name {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .menu-item-desc {
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    .menu-item-price {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #111;
+      white-space: nowrap;
+    }
+
+    .section-separator {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 30px 0 28px;
+    }
+
+    .section-separator::before,
+    .section-separator::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #c9a24b;
+    }
+
+    .section-separator span {
+      color: #c9a24b;
+      font-size: 1.3rem;
+    }
+
+    .menu-note {
+      margin-top: 28px;
+      border: 1px solid #cfa34a;
+      padding: 14px 18px;
+      color: #555;
+      font-size: 0.95rem;
+      background: #fffdf9;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      padding: 26px 20px 36px;
+    }
+
+    @media (max-width: 640px) {
+      .menu-title {
+        font-size: 2.8rem;
+      }
+
+      .menu-subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+      }
+
+      .menu-container {
+        padding: 28px 18px;
+      }
+
+      .menu-item {
+        gap: 12px;
+      }
+
+      .menu-item-name,
+      .menu-item-price {
+        font-size: 0.96rem;
+      }
+
+      .menu-item-desc {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Kawa Omakase A La Carte Menu",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "A La Carte Selection",
+        "hasMenuItem": [
+          { "@type": "MenuItem", "name": "A5 Wagyu", "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "A5 Wagyu Uni", "offers": { "@type": "Offer", "price": "25", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Aji (Horse Mackerel)", "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Botan Ebi", "offers": { "@type": "Offer", "price": "8", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Chutoro", "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Hamachi", "offers": { "@type": "Offer", "price": "9", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Ikura", "offers": { "@type": "Offer", "price": "8", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Kanpachi (Amberjack)", "offers": { "@type": "Offer", "price": "9", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Kinmedai (Golden Eye Snapper)", "offers": { "@type": "Offer", "price": "12", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Madai", "offers": { "@type": "Offer", "price": "8", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Otoro Toro Caviar", "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Salmon Tomato", "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Scallop Uni", "offers": { "@type": "Offer", "price": "15", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Shima Aji", "offers": { "@type": "Offer", "price": "9", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Tuna Truffle", "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Unagi", "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Uni (Hokkaido)", "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" } },
+          { "@type": "MenuItem", "name": "Uni Handroll (Hokkaido)", "offers": { "@type": "Offer", "price": "25", "priceCurrency": "USD" } }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Chef’s Special Selections",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Kawa Special",
+            "description": "Wagyu, Toro, Scallop, Uni",
+            "offers": { "@type": "Offer", "price": "25", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Ocean Kiss",
+            "description": "Ikura, Toro, Uni, Caviar on Monaka",
+            "offers": { "@type": "Offer", "price": "22", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Toro Scallop Handroll",
+            "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Wagyu Uni Handroll",
+            "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Caviar Bump",
+            "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Toro Toro",
+            "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="menu-wrapper">
+    <section class="menu-container">
+      <h1 class="menu-title">Kawa Omakase</h1>
+      <p class="menu-subtitle">À La Carte Selection</p>
+      <div class="menu-divider"></div>
+
+      <p class="menu-description">
+        Explore the Kawa Omakase à la carte menu in East Village, NYC, featuring premium sushi,
+        Hokkaido uni, toro, wagyu, handrolls, caviar selections, and chef-curated specialty bites.
+      </p>
+
+      <section>
+        <h2 class="section-heading">A La Carte Selection</h2>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">A5 Wagyu</div></div><div class="menu-item-price">$18</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">A5 Wagyu Uni</div></div><div class="menu-item-price">$25</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Aji (Horse Mackerel)</div></div><div class="menu-item-price">$10</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Botan Ebi</div></div><div class="menu-item-price">$8</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Chutoro</div></div><div class="menu-item-price">$10</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Hamachi</div></div><div class="menu-item-price">$9</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Ikura</div></div><div class="menu-item-price">$8</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Kanpachi (Amberjack)</div></div><div class="menu-item-price">$9</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Kinmedai (Golden Eye Snapper)</div></div><div class="menu-item-price">$12</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Madai</div></div><div class="menu-item-price">$8</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Otoro Toro Caviar</div></div><div class="menu-item-price">$18</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Salmon Tomato</div></div><div class="menu-item-price">$10</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Scallop Uni</div></div><div class="menu-item-price">$15</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Shima Aji</div></div><div class="menu-item-price">$9</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Tuna Truffle</div></div><div class="menu-item-price">$10</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Unagi</div></div><div class="menu-item-price">$18</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Uni (Hokkaido)</div></div><div class="menu-item-price">$18</div></div>
+          <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Uni Handroll (Hokkaido)</div></div><div class="menu-item-price">$25</div></div>
+        </div>
+      </section>
+
+      <div class="section-separator"><span>✦</span></div>
+
+      <section>
+        <h2 class="special-heading">Chef’s Special Selections</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="menu-item-left">
+              <div class="menu-item-name">Kawa Special</div>
+              <div class="menu-item-desc">Wagyu, Toro, Scallop, Uni</div>
+            </div>
+            <div class="menu-item-price">$25</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-left">
+              <div class="menu-item-name">Ocean Kiss</div>
+              <div class="menu-item-desc">Ikura, Toro, Uni, Caviar on Monaka</div>
+            </div>
+            <div class="menu-item-price">$22</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-left">
+              <div class="menu-item-name">Toro Scallop Handroll</div>
+            </div>
+            <div class="menu-item-price">$18</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-left">
+              <div class="menu-item-name">Wagyu Uni Handroll</div>
+            </div>
+            <div class="menu-item-price">$20</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-left">
+              <div class="menu-item-name">Caviar Bump</div>
+            </div>
+            <div class="menu-item-price">$18</div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-left">
+              <div class="menu-item-name">Toro Toro</div>
+            </div>
+            <div class="menu-item-price">$18</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="menu-note">
+        Menu items and availability may vary based on seasonal sourcing and market selection.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kawa Omakase. All rights reserved.</p>
+  </footer>
+</body>
+</html>
