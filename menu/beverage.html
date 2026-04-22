@@ -1,648 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="canonical" href="https://kawaomakase.com/menu/beverage.html" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kawa Omakase Beverage Menu</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>Beverage Menu | Sake, Wine & Beer in East Village NYC | Kawa Omakase</title>
+
+  <meta name="description" content="Explore premium sake, Japanese beer, white wine, and tea at Kawa Omakase in East Village NYC. Curated beverage pairings for omakase dining." />
+  <link rel="canonical" href="https://kawaomakase.com/menu/beverage.html" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #f8f5ef;
-      --card: #fffdf9;
-      --text: #181818;
-      --muted: #66625b;
-      --line: #e7dfd2;
-      --accent: #b08a42;
-      --accent-soft: #efe4cf;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      padding: 48px 20px;
-      background: var(--bg);
-      color: var(--text);
+      padding: 40px 20px;
+      background: #f8f5ef;
       font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      color: #181818;
     }
 
     .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--line);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-      padding: 56px 44px 42px;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 42px;
-    }
-
-    .header .eyebrow {
-      font-size: 0.78rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fffdf9;
+      padding: 40px;
+      border: 1px solid #e7dfd2;
     }
 
     h1 {
-      margin: 0;
+      text-align: center;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.2rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      line-height: 1;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    .header .subtitle {
-      margin-top: 10px;
-      font-size: 0.96rem;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #b08a42;
+      font-weight: 500;
     }
 
     .section {
-      margin-top: 52px;
-    }
-
-    .section:first-of-type {
-      margin-top: 28px;
+      margin-top: 40px;
     }
 
     h2 {
-      margin: 0 0 28px;
       text-align: center;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.25rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      color: var(--text);
-      position: relative;
-    }
-
-    h2::after {
-      content: "";
-      display: block;
-      width: 72px;
-      height: 1px;
-      background: var(--accent);
-      margin: 12px auto 0;
-    }
-
-    .menu-flow {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
+      margin-bottom: 20px;
     }
 
     .menu-item {
       display: flex;
-      align-items: flex-start;
-      gap: 32px;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .menu-item:first-child {
-      padding-top: 8px;
-    }
-
-    .menu-item:last-child {
-      border-bottom: none;
-      padding-bottom: 6px;
+      gap: 20px;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
     }
 
     .menu-item img {
-      width: 220px;
-      height: 280px;
+      width: 140px;
+      height: 180px;
       object-fit: contain;
-      background: #fff;
-      border: 1px solid #f0eadf;
-      padding: 10px;
-      flex-shrink: 0;
     }
 
     .menu-details {
       flex: 1;
-      min-width: 0;
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      line-height: 1.05;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-    }
-
-    .category {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 6px 12px;
-      border: 1px solid var(--accent);
-      background: var(--accent-soft);
-      color: #8b6a2b;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .description {
-      margin: 0 0 16px;
-      font-size: 0.98rem;
-      line-height: 1.75;
-      color: var(--muted);
-      max-width: 92%;
-    }
-
-    .flavor-notes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .flavor-notes span {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #f5efe4;
-      color: #5d584f;
-      font-size: 0.83rem;
-      line-height: 1;
-    }
-
-    .details-list {
-      margin-top: 6px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .details-list p {
-      margin: 0;
-      padding: 9px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-      border-bottom: 1px dotted #e3dacb;
-    }
-
-    .details-list p:last-child {
-      border-bottom: none;
-    }
-
-    .details-list span {
-      color: #756f65;
-    }
-
-    .details-list strong {
-      color: var(--text);
-      font-weight: 500;
-      text-align: right;
     }
 
     .price {
-      margin: 18px 0 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
       font-weight: 600;
-      color: var(--text);
+      margin-top: 10px;
     }
 
-    .hidden {
-      display: none;
-    }
-
-    .footer-note {
-      margin-top: 36px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
+    .footer {
       text-align: center;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #8a8378;
-    }
-
-    @media (max-width: 820px) {
-      body {
-        padding: 24px 12px;
-      }
-
-      .container {
-        padding: 34px 18px 28px;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      h2 {
-        font-size: 1.9rem;
-        margin-bottom: 22px;
-      }
-
-      h3 {
-        font-size: 1.6rem;
-      }
-
-      .menu-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-        padding: 24px 0;
-      }
-
-      .menu-item img {
-        width: 190px;
-        height: auto;
-      }
-
-      .description {
-        max-width: 100%;
-      }
-
-      .category {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .flavor-notes {
-        justify-content: center;
-      }
-
-      .details-list p {
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-      }
-
-      .details-list strong {
-        text-align: center;
-      }
-
-      .price {
-        font-size: 1.45rem;
-      }
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #777;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <div class="header">
-      <div class="eyebrow">Kawa Omakase</div>
-      <h1>Beverage Selection</h1>
-      <div class="subtitle">Curated Pairings for the Omakase Experience</div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/menu/a-la-carte.html">A La Carte</a>
+      <a href="/menu/beverage.html">Beverage</a>
+      <a href="https://resy.com">Reservations</a>
+    </nav>
+
+    <h1>Kawa Omakase</h1>
+    <p class="subtitle">Beverage Selection – East Village NYC</p>
+
+    <p style="text-align:center; max-width:600px; margin:auto;">
+      Discover premium sake, wine, beer, and tea curated to complement the omakase experience at Kawa Omakase in East Village, Manhattan.
+    </p>
+
+    <!-- SAKE -->
+    <div class="section">
+      <h2>Chef’s Sake Selection</h2>
+
+      <div class="menu-item">
+        <img src="/images/dassai-45-720ml.jpg" alt="Dassai 45 Junmai Daiginjo sake bottle">
+        <div class="menu-details">
+          <strong>Dassai 45</strong>
+          <p>Honeydew, mandarin, balanced dryness</p>
+          <div class="price">$70 (720ml) · $35 (300ml)</div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="/images/dassai-39-720ml.jpg" alt="Dassai 39 sake bottle">
+        <div class="menu-details">
+          <strong>Dassai 39</strong>
+          <p>Melon, peach, smooth finish</p>
+          <div class="price">$105 · $48</div>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="/images/dassai-23-300ml.jpg" alt="Dassai 23 premium sake bottle">
+        <div class="menu-details">
+          <strong>Dassai 23</strong>
+          <p>Ultra premium, floral, silky</p>
+          <div class="price">$165 · $75</div>
+        </div>
+      </div>
     </div>
 
-    <!-- CHEF'S SAKE SELECTION -->
-    <section class="section">
-      <h2>Chef’s Sake Selection</h2>
-      <div class="menu-flow">
+    <!-- WINE -->
+    <div class="section">
+      <h2>White Wine</h2>
 
-        <div class="menu-item">
-          <img src="images/dassai-45-720ml.jpg" alt="Dassai 45">
-          <div class="menu-details">
-            <h3>Dassai 45 Junmai Daiginjo</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Chewy, full-bodied sake with honeydew aromas and muscat sweetness balanced by crisp dryness.</p>
-            <div class="flavor-notes">
-              <span>Honeydew</span><span>Mandarin</span><span>Blossom</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Yamaguchi, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>45%</strong></p>
-              <p><span>SMV</span><strong>+3</strong></p>
-              <p><span>Acidity</span><strong>1.4</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$70 (720ml) · $35 (300ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/dassai-39-720ml.jpg" alt="Dassai 39">
-          <div class="menu-details">
-            <h3>Dassai 39 Junmai Daiginjo</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Soft, elegant aromas of melon, peach, and white flowers. Smooth silky texture, clean finish.</p>
-            <div class="flavor-notes">
-              <span>Melon</span><span>Peach</span><span>Floral</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Yamaguchi, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>39%</strong></p>
-              <p><span>Alcohol Content</span><strong>16%</strong></p>
-              <p><span>SMV</span><strong>+3</strong></p>
-              <p><span>Acidity</span><strong>1.3</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$105 (720ml) · $48 (300ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/dassai-23-300ml.jpg" alt="Dassai 23">
-          <div class="menu-details">
-            <h3>Dassai 23 Junmai Daiginjo (300ml)</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Ultra-premium sake polished to 23%. Silky, elegant, floral, with a clean lingering finish.</p>
-            <div class="flavor-notes">
-              <span>Elegant</span><span>Silky</span><span>Floral</span><span>Refined Sweetness</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Yamaguchi, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>23%</strong></p>
-              <p><span>Alcohol Content</span><strong>16%</strong></p>
-              <p><span>SMV</span><strong>+4</strong></p>
-              <p><span>Acidity</span><strong>1.3</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$165 (720ml) · $75 (300ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/kubota-720ml.jpg" alt="Kubota Junmai Daiginjo">
-          <div class="menu-details">
-            <h3>Kubota Junmai Daiginjo</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Refined sake with delicate pear and apple notes. Light, clean, and refreshing.</p>
-            <div class="flavor-notes">
-              <span>Pear</span><span>Apple</span><span>Clean Finish</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Niigata, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
-              <p><span>SMV</span><strong>+2</strong></p>
-              <p><span>Acidity</span><strong>1.3</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$78 (720ml) · $38 (300ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/kubota-manjyu-720ml.jpg" alt="Kubota Manjyu">
-          <div class="menu-details">
-            <h3>Kubota Manjyu Junmai Daiginjo</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Elegant and refined with melon and pear aromas, a smooth silky body, and pristine finish.</p>
-            <div class="flavor-notes">
-              <span>Melon</span><span>Pear</span><span>Silky Finish</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Niigata, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
-              <p><span>Alcohol Content</span><strong>15%</strong></p>
-              <p><span>SMV</span><strong>+2</strong></p>
-              <p><span>Acidity</span><strong>1.2</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$145 (720ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/hakkaisan-45-300ml.jpg" alt="Hakkaisan 45">
-          <div class="menu-details">
-            <h3>Hakkaisan 45 Junmai Daiginjo</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Delicate steamed rice aroma with a gentle floral note and pristine dry finish.</p>
-            <div class="flavor-notes">
-              <span>Steamed Rice</span><span>Floral</span><span>Earthy</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Niigata, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>45%</strong></p>
-              <p><span>Alcohol Content</span><strong>16%</strong></p>
-              <p><span>SMV</span><strong>+5</strong></p>
-              <p><span>Acidity</span><strong>1.2</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$89 (720ml) · $42 (300ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/hakkaisan-yukimuro-8yr.jpg" alt="Hakkaisan Yukimuro Snow Aged 8 Years">
-          <div class="menu-details">
-            <h3>Hakkaisan Yukimuro Snow Aged 8 Years</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">Rare sake aged eight years in snow. Deep umami, velvety smooth texture, elegant finish.</p>
-            <div class="flavor-notes">
-              <span>Umami</span><span>Velvety</span><span>Elegant Finish</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Niigata, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>40%</strong></p>
-              <p><span>Alcohol Content</span><strong>17%</strong></p>
-              <p><span>Aging</span><strong>8 Years</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$230 (720ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/nihon-sakari-yuzu.jpg" alt="Nihon Sakari Yuzu">
-          <div class="menu-details">
-            <h3>Nihon Sakari Yuzu</h3>
-            <div class="category">Yuzushu</div>
-            <p class="description">Bright, citrusy yuzu sake with a sweet-tart refreshing finish.</p>
-            <div class="flavor-notes">
-              <span>Yuzu Citrus</span><span>Sweet</span><span>Tart</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Hyogo, Japan</strong></p>
-              <p><span>Type</span><strong>Yuzushu</strong></p>
-              <p><span>Alcohol Content</span><strong>10%</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled / Rocks</strong></p>
-            </div>
-            <p class="price">$76 (700ml) · $32 (300ml)</p>
-          </div>
-        </div>
-
-        <div class="menu-item">
-          <img src="images/hakutsuru-sho-une-300ml.jpg" alt="Hakutsuru Junmai Dai Ginjo Sho-Une Premium Sake Bottle">
-          <div class="menu-details">
-            <h3>Hakutsuru Junmai Dai Ginjo Sho-Une Premium Sake (300ml)</h3>
-            <div class="category">Junmai Daiginjo</div>
-            <p class="description">A supreme sake with a velvety smooth texture. Fruity aromas of white peach and pear create a deeply complex yet easy-drinking profile.</p>
-            <div class="flavor-notes">
-              <span>White Peach</span><span>Pear</span><span>Apple</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Hyogo Prefecture, Japan</strong></p>
-              <p><span>Rice Polishing Ratio</span><strong>50%</strong></p>
-              <p><span>Alcohol Content</span><strong>15.5%</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled or Room Temperature</strong></p>
-            </div>
-            <p class="price">$42</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ARTISAN UMESHU -->
-    <section class="section">
-      <h2>Artisan Umeshu</h2>
-      <div class="menu-flow">
-        <div class="menu-item hidden">
-          <img src="images/hakutsuru-plum-wine.jpg" alt="Hakutsuru Plum Wine Bottle">
-          <div class="menu-details">
-            <h3>Hakutsuru Plum Wine</h3>
-            <div class="category">Umeshu</div>
-            <p class="description">A sweet and tart plum wine with rich ume fruit flavors. Its balanced sweetness and refreshing acidity make it a delightful aperitif or dessert wine.</p>
-            <div class="flavor-notes">
-              <span>Plum</span><span>Sweet</span><span>Tart</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Hyogo Prefecture, Japan</strong></p>
-              <p><span>Type</span><strong>Umeshu (Plum Wine)</strong></p>
-              <p><span>Alcohol Content</span><strong>12.5%</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled or On the Rocks</strong></p>
-            </div>
-            <p class="price">$48 (750ml)</p>
-          </div>
+      <div class="menu-item">
+        <img src="/images/laroche-saint-martin-chablis.png" alt="Chablis white wine bottle">
+        <div class="menu-details">
+          <strong>Chablis 2023</strong>
+          <p>Citrus, mineral, crisp finish</p>
+          <div class="price">$20 Glass · $85 Bottle</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- CHEF'S WHITE SELECTION -->
-    <section class="section">
-      <h2>Chef’s White Selection</h2>
-      <div class="menu-flow">
+    <!-- BEER -->
+    <div class="section">
+      <h2>Japanese Beer</h2>
 
-        <div class="menu-item">
-          <img src="images/laroche-saint-martin-chablis.png" alt="Laroche Saint Martin Chablis">
-          <div class="menu-details">
-            <h3>Laroche Saint Martin Chablis 2023</h3>
-            <div class="category">White Burgundy</div>
-            <p class="description">Crisp, mineral-driven Chardonnay from Chablis with bright citrus, green apple, and a clean refreshing finish. Elegant acidity and subtle salinity make it a natural pairing for delicate omakase courses.</p>
-            <div class="flavor-notes">
-              <span>Citrus</span><span>Green Apple</span><span>Mineral</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Chablis, Burgundy, France</strong></p>
-              <p><span>Grape</span><strong>Chardonnay</strong></p>
-              <p><span>Style</span><strong>Dry / Light-Bodied</strong></p>
-              <p><span>Pairing</span><strong>Hirame, Hotate, Oyster, White Fish</strong></p>
-              <p><span>Serving Temp</span><strong>Chilled</strong></p>
-            </div>
-            <p class="price">$20 (Glass) · $85 (Bottle)</p>
-          </div>
+      <div class="menu-item">
+        <img src="/images/sapporo-premium-12oz.jpg" alt="Sapporo beer">
+        <div class="menu-details">
+          <strong>Sapporo</strong>
+          <p>Crisp, clean finish</p>
+          <div class="price">$8</div>
         </div>
-
       </div>
-    </section>
 
-    <!-- JAPANESE & CRAFT BEER -->
-    <section class="section">
-      <h2>Japanese &amp; Craft Beer</h2>
-      <div class="menu-flow">
-
-        <div class="menu-item">
-          <img src="images/sapporo-premium-12oz.jpg" alt="Sapporo Premium">
-          <div class="menu-details">
-            <h3>Sapporo Premium Beer (12 Oz)</h3>
-            <div class="category">Lager</div>
-            <p class="description">Crisp, refined lager with a clean finish.</p>
-            <div class="flavor-notes">
-              <span>Crisp</span><span>Refined</span><span>Clean Finish</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>USA</strong></p>
-              <p><span>ABV</span><strong>4.9%</strong></p>
-              <p><span>Calories</span><strong>140</strong></p>
-              <p><span>Carbs</span><strong>10.3g</strong></p>
-            </div>
-            <p class="price">$8</p>
-          </div>
+      <div class="menu-item">
+        <img src="/images/kirin-ichiban-12oz.jpg" alt="Kirin Ichiban beer">
+        <div class="menu-details">
+          <strong>Kirin Ichiban</strong>
+          <p>Smooth, mild malt</p>
+          <div class="price">$10</div>
         </div>
-
-        <div class="menu-item">
-          <img src="images/kirin-ichiban-12oz.jpg" alt="Kirin Ichiban">
-          <div class="menu-details">
-            <h3>Kirin Ichiban Premium Beer (12 Oz)</h3>
-            <div class="category">Lager</div>
-            <p class="description">Smooth, clean lager brewed using a first-press method.</p>
-            <div class="flavor-notes">
-              <span>Smooth</span><span>Clean</span><span>Mild Malt</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>USA</strong></p>
-              <p><span>ABV</span><strong>5.0%</strong></p>
-              <p><span>Calories</span><strong>145</strong></p>
-              <p><span>Carbs</span><strong>10g</strong></p>
-            </div>
-            <p class="price">$10</p>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
 
-    <!-- NON-ALCOHOLIC SELECTION -->
-    <section class="section">
-      <h2>Non-Alcoholic Selection</h2>
-      <div class="menu-flow">
+    <!-- NON ALCOHOL -->
+    <div class="section">
+      <h2>Non-Alcoholic</h2>
 
-        <div class="menu-item">
-          <img src="images/saratoga-sparkling-water.jpg" alt="Saratoga Water">
-          <div class="menu-details">
-            <h3>Saratoga Sparkling Water (12 Oz)</h3>
-            <div class="category">Sparkling Water</div>
-            <p class="description">Premium sparkling water with crisp fine bubbles.</p>
-            <div class="flavor-notes">
-              <span>Crisp</span><span>Refreshing</span><span>Fine Bubbles</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Saratoga Springs, USA</strong></p>
-              <p><span>Since</span><strong>1872</strong></p>
-            </div>
-            <p class="price">$5.5</p>
-          </div>
+      <div class="menu-item">
+        <img src="/images/saratoga-sparkling-water.jpg" alt="Saratoga sparkling water">
+        <div class="menu-details">
+          <strong>Sparkling Water</strong>
+          <p>Refreshing fine bubbles</p>
+          <div class="price">$5.5</div>
         </div>
-
-        <div class="menu-item">
-          <img src="images/green-tea.jpg" alt="Green Tea">
-          <div class="menu-details">
-            <h3>Hot Green Tea</h3>
-            <div class="category">Sencha Green Tea</div>
-            <p class="description">Traditional Japanese green tea with fresh grassy flavor.</p>
-            <div class="flavor-notes">
-              <span>Fresh</span><span>Grassy</span><span>Slightly Astringent</span>
-            </div>
-            <div class="details-list">
-              <p><span>Origin</span><strong>Japan</strong></p>
-              <p><span>Type</span><strong>Sencha</strong></p>
-              <p><span>Serving Temp</span><strong>Hot</strong></p>
-            </div>
-            <p class="price">$4</p>
-          </div>
-        </div>
-
       </div>
-    </section>
 
-    <div class="footer-note">Kawa Omakase · East Village, New York</div>
+      <div class="menu-item">
+        <img src="/images/green-tea.jpg" alt="Japanese green tea">
+        <div class="menu-details">
+          <strong>Green Tea</strong>
+          <p>Fresh, grassy</p>
+          <div class="price">$4</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Kawa Omakase · East Village, New York
+    </div>
+
   </div>
 </body>
 </html>
