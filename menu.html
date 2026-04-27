@@ -12,15 +12,15 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KAWA Omakase tasting menu — a 14-course seasonal Japanese omakase by Chef Tony in NYC's East Village. 2 appetizers, 10 nigiri, 1 canapé, 1 handroll. $88 per guest.">
-  <meta name="keywords" content="KAWA Omakase menu, omakase tasting menu NYC, Chef Tony omakase menu, East Village omakase menu, 14 course sushi NYC, nigiri omakase East Village">
+  <meta name="description" content="Explore the full KAWA Omakase menu — a 14-course $88 seasonal tasting menu, à la carte sushi, and a curated beverage list of sake, wine, beer, and tea. East Village, NYC.">
+  <meta name="keywords" content="KAWA Omakase menu, omakase menu NYC, à la carte sushi NYC, beverage menu, sake list, East Village omakase menu, Chef Tony">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kawaomakase.com/menu/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="restaurant.menu">
-  <meta property="og:title" content="Tasting Menu — KAWA Omakase | East Village NYC">
-  <meta property="og:description" content="14-course seasonal omakase by Chef Tony. 2 appetizers, 10 nigiri, 1 canapé, 1 handroll. $88 per guest. East Village, NYC.">
+  <meta property="og:title" content="Menus — KAWA Omakase | Tasting, À La Carte & Beverage in East Village NYC">
+  <meta property="og:description" content="Three menus at KAWA Omakase — the 14-course $88 seasonal tasting menu, à la carte sushi, and a curated beverage list. East Village, NYC.">
   <meta property="og:url" content="https://kawaomakase.com/menu/">
   <meta property="og:image" content="https://kawaomakase.com/images/gallery-2.jpg">
   <meta property="og:image:alt" content="Fresh seasonal nigiri selection at KAWA Omakase NYC">
@@ -29,11 +29,11 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tasting Menu — KAWA Omakase NYC">
-  <meta name="twitter:description" content="14-course seasonal omakase by Chef Tony. $88/guest. East Village, NYC.">
+  <meta name="twitter:title" content="Menus — KAWA Omakase NYC">
+  <meta name="twitter:description" content="Three menus at KAWA Omakase: 14-course $88 tasting menu, à la carte sushi, and a curated beverage list. East Village, NYC.">
   <meta name="twitter:image" content="https://kawaomakase.com/images/gallery-2.jpg">
 
-  <title>Tasting Menu — KAWA Omakase | 14-Course Omakase NYC · $88</title>
+  <title>Menus — KAWA Omakase | Tasting · À La Carte · Beverage | East Village NYC</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -148,6 +148,59 @@
       letter-spacing:.14em;
       text-transform:uppercase;
       color:var(--muted);
+    }
+
+    /* ── Menu picker — three cards near the top of the hub page ── */
+    .menu-picker{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+      margin-top:32px;
+    }
+    .menu-picker a{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      transition:box-shadow .2s, transform .2s;
+    }
+    .menu-picker a:hover{
+      box-shadow:0 6px 28px rgba(0,0,0,.08);
+      transform:translateY(-2px);
+    }
+    .menu-picker .picker-eyebrow{
+      font-size:11px;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .menu-picker .picker-title{
+      font-family:"EB Garamond", serif;
+      font-size:24px;
+      letter-spacing:.04em;
+      margin:0;
+    }
+    .menu-picker .picker-desc{
+      font-size:13px;
+      line-height:1.6;
+      color:var(--muted);
+      margin:0;
+    }
+    .menu-picker .picker-cta{
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#111;
+      border-bottom:1px solid #111;
+      align-self:flex-start;
+      padding-bottom:2px;
+      margin-top:6px;
+    }
+    @media(max-width:900px){
+      .menu-picker{grid-template-columns:1fr}
     }
 
     /* ── Menu layout — uses same card style as index info section ── */
@@ -312,14 +365,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="page-header">
     <div class="page-header-inner">
       <p class="kicker">Chef Tony · East Village · New York</p>
-      <h1>Tasting Menu</h1>
-      <p class="sub">Seasonal · Omakase · 14 Courses · $88 per guest</p>
+      <h1>Menus</h1>
+      <p class="sub">Tasting · À La Carte · Beverage</p>
     </div>
   </div>
 
-  <section>
-    <p class="kicker">Menu</p>
-    <p class="lead">Seasonal Japanese omakase, handcrafted course by course.</p>
+  <section aria-labelledby="picker-heading">
+    <p class="kicker">Choose Your Menu</p>
+    <h2 id="picker-heading" class="lead">Three ways to dine with us.</h2>
+    <p class="body">Every visit to KAWA Omakase begins at the counter — but the path is yours. Sit back for the full 14-course seasonal tasting menu, choose your own pieces à la carte, or browse our curated list of sake, wine, beer, and tea pairings.</p>
+
+    <nav class="menu-picker" aria-label="KAWA Omakase menus">
+      <a href="#tasting" aria-label="View the 14-course tasting menu">
+        <span class="picker-eyebrow">$88 · 14 Courses</span>
+        <h3 class="picker-title">Tasting Menu</h3>
+        <p class="picker-desc">Chef Tony's seasonal omakase — 2 appetizers, 10 nigiri, 1 canapé, and 1 handroll, all guided by what is freshest that week.</p>
+        <span class="picker-cta">View Tasting Menu</span>
+      </a>
+      <a href="/menu/a-la-carte.html" aria-label="View the à la carte menu">
+        <span class="picker-eyebrow">By the Piece</span>
+        <h3 class="picker-title">À La Carte</h3>
+        <p class="picker-desc">Choose your own — premium nigiri, uni, toro, wagyu, caviar, handrolls, and chef's specials, ordered piece by piece at the counter.</p>
+        <span class="picker-cta">View À La Carte</span>
+      </a>
+      <a href="/menu/beverage.html" aria-label="View the beverage menu">
+        <span class="picker-eyebrow">Sake · Wine · Beer · Tea</span>
+        <h3 class="picker-title">Beverage</h3>
+        <p class="picker-desc">A curated list of premium sake, artisan umeshu, chef-selected white wine, Japanese beer, and refined non-alcoholic options.</p>
+        <span class="picker-cta">View Beverage Menu</span>
+      </a>
+    </nav>
+  </section>
+
+  <section id="tasting" aria-labelledby="tasting-heading">
+    <p class="kicker">Tasting Menu</p>
+    <h2 id="tasting-heading" class="lead">Seasonal Japanese omakase, handcrafted course by course.</h2>
     <p class="body">Our seasonal tasting menu features the freshest selections, handcrafted by Chef Tony to highlight peak flavors and premium ingredients. Every detail — from the first appetizer to the final handroll — reflects over 20 years of sushi craftsmanship.</p>
 
     <div class="menu-grid">
