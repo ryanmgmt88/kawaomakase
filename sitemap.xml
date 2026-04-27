@@ -3,69 +3,69 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://www.kawaomakase.com/</loc>
+    <loc>https://kawaomakase.com/</loc>
     <lastmod>2025-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/hero-kawa.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/hero-kawa.jpg</image:loc>
       <image:title>KAWA Omakase — East Village NYC Omakase Counter</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/gallery-1.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/gallery-1.jpg</image:loc>
       <image:title>Nigiri sushi at KAWA Omakase NYC</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/gallery-2.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/gallery-2.jpg</image:loc>
       <image:title>Chef Tony at the omakase counter</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/gallery-3.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/gallery-3.jpg</image:loc>
       <image:title>Seasonal omakase course at KAWA</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/gallery-4.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/gallery-4.jpg</image:loc>
       <image:title>Hand-pressed nigiri at KAWA Omakase</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/gallery-5.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/gallery-5.jpg</image:loc>
       <image:title>KAWA Omakase interior, East Village NYC</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/gallery-6.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/gallery-6.jpg</image:loc>
       <image:title>Omakase dessert course at KAWA</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://www.kawaomakase.com/blog/what-is-omakase-guide</loc>
+    <loc>https://kawaomakase.com/blog/what-is-omakase-guide</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/blog-omakase-guide.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/blog-omakase-guide.jpg</image:loc>
       <image:title>What Is Omakase — First-Timer's Guide</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://www.kawaomakase.com/blog/best-omakase-nyc-under-100</loc>
+    <loc>https://kawaomakase.com/blog/best-omakase-nyc-under-100</loc>
     <lastmod>2025-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/blog-affordable-omakase.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/blog-affordable-omakase.jpg</image:loc>
       <image:title>Best Omakase NYC Under $100</image:title>
     </image:image>
   </url>
 
   <url>
-    <loc>https://www.kawaomakase.com/blog/seasonal-fish-sourcing-omakase</loc>
+    <loc>https://kawaomakase.com/blog/seasonal-fish-sourcing-omakase</loc>
     <lastmod>2025-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kawaomakase.com/images/blog-seasonal-fish.jpg</image:loc>
+      <image:loc>https://kawaomakase.com/images/blog-seasonal-fish.jpg</image:loc>
       <image:title>Seasonal Fish Sourcing at KAWA Omakase</image:title>
     </image:image>
   </url>

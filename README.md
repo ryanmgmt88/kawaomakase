@@ -1,6 +1,6 @@
 # KAWA Omakase — Website
 
-Source code for [kawaomakase.com](https://www.kawaomakase.com), the website for KAWA Omakase, an intimate $88 Japanese omakase counter by Chef Tony in NYC's East Village.
+Source code for [kawaomakase.com](https://kawaomakase.com), the website for KAWA Omakase, an intimate $88 Japanese omakase counter by Chef Tony in NYC's East Village.
 
 ## What's in this repo
 
@@ -18,7 +18,6 @@ This is a static website hosted on **GitHub Pages** with a custom domain (config
 │   ├── best-omakase-nyc-under-100/    "Best Omakase in NYC Under $100"
 │   └── seasonal-fish-sourcing-omakase/ "How We Choose What's on the Menu"
 ├── images/                    Hero photos, gallery, sake bottles
-├── styles.css                 Global styles
 ├── sitemap.xml                For search engines
 ├── robots.txt                 Search-engine crawl rules
 └── CNAME                      Domain config (kawaomakase.com)

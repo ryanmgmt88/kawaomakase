@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://www.kawaomakase.com/sitemap.xml
+Sitemap: https://kawaomakase.com/sitemap.xml
