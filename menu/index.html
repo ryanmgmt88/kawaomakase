@@ -314,6 +314,40 @@
       color:#fff;
     }
 
+    /* ── Local SEO + FAQ sections ── */
+    .local-menu-seo,
+    .menu-faq{
+      border-top:1px solid var(--line);
+    }
+    .local-menu-seo .body,
+    .menu-faq .body{
+      max-width:82ch;
+    }
+    .faq-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:32px;
+    }
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:24px;
+    }
+    .faq-item h3{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--text);
+      margin:0 0 12px;
+    }
+    .faq-item p{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.75;
+      margin:0;
+    }
+
     /* ── Footer — identical to index ── */
     footer{
       border-top:1px solid var(--line);
@@ -330,6 +364,7 @@
       .page-header h1{font-size:36px}
       .menu-grid{grid-template-columns:1fr}
       .card-full{grid-column:span 1}
+      .faq-list{grid-template-columns:1fr}
     }
     @media(max-width:420px){
       .page-header h1{font-size:30px}
@@ -455,6 +490,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
     </div>
+</section>
+
+  <section class="local-menu-seo" aria-labelledby="local-menu-seo-heading">
+    <p class="kicker">Downtown Manhattan Omakase</p>
+    <h2 id="local-menu-seo-heading" class="lead">Omakase near East Village, Lower East Side, NoHo &amp; SoHo.</h2>
+    <p class="body">
+      KAWA Omakase is located at <strong>37 E 1st St, New York, NY 10003</strong>, in the East Village near the Lower East Side, Bowery, NoHo, Nolita, SoHo, NYU, Union Square, and Chinatown. For guests searching for omakase near East Village, affordable omakase near the Lower East Side, or a sushi tasting menu in downtown Manhattan, KAWA offers an intimate 14-course chef-led omakase experience for $88.
+    </p>
+    <p class="body" style="margin-top:14px;">
+      Our sushi counter is convenient for date nights, birthdays, anniversaries, first-time omakase guests, business dinners, tourists visiting downtown NYC, and locals looking for a high-quality omakase experience under $100.
+    </p>
+  </section>
+
+  <section class="menu-faq" aria-labelledby="menu-faq-heading">
+    <p class="kicker">Menu FAQ</p>
+    <h2 id="menu-faq-heading" class="lead">Frequently asked questions about the KAWA Omakase menu.</h2>
+    <p class="body">
+      Planning your visit? Here are the most common questions about our $88 omakase menu, reservation policy, location, and dining experience in the East Village.
+    </p>
+
+    <div class="faq-list">
+      <article class="faq-item">
+        <h3>How much is the KAWA Omakase menu?</h3>
+        <p>The KAWA Omakase seasonal tasting menu is $88 per guest. The experience includes a chef-led 14-course progression at our East Village sushi counter.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>What is included in the 14-course omakase?</h3>
+        <p>The menu includes 2 appetizers, 10 pieces of nigiri, 1 canapé, and 1 handroll. The exact menu may change based on seasonality, market availability, and the chef&rsquo;s selection.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Where is KAWA Omakase located?</h3>
+        <p>KAWA Omakase is located at 37 E 1st St, New York, NY 10003, in the East Village near the Lower East Side, Bowery, NoHo, Nolita, SoHo, NYU, Union Square, and Chinatown.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Do I need a reservation?</h3>
+        <p>Yes. KAWA Omakase is reservation-only. Guests can reserve seats through Resy for the 14-course omakase experience.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Is KAWA good for first-time omakase diners?</h3>
+        <p>Yes. KAWA is approachable for first-time omakase guests because the menu is clear, seasonal, chef-led, and priced at $88 for a complete 14-course sushi tasting.</p>
+      </article>
+
+      <article class="faq-item">
+        <h3>Is KAWA good for date night or birthdays?</h3>
+        <p>Yes. The intimate counter setting makes KAWA Omakase a strong option for date nights, birthdays, anniversaries, and small celebrations in downtown Manhattan.</p>
+      </article>
+    </div>
   </section>
 
 </main>
@@ -469,7 +555,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "@context": "https://schema.org",
   "@type": "Menu",
   "name": "KAWA Omakase Tasting Menu",
-  "description": "A 14-course seasonal Japanese omakase tasting menu by Chef Tony in NYC's East Village.",
+  "description": "A 14-course seasonal Japanese omakase tasting menu for $88 by Chef Tony in NYC's East Village, near the Lower East Side, Bowery, NoHo, Nolita, SoHo, NYU, Union Square, and Chinatown.",
   "url": "https://kawaomakase.com/menu/",
   "hasMenuSection": [
     {
