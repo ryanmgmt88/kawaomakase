@@ -14,9 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>KAWA Omakase NYC | $88 Japanese Omakase in East Village | Chef Tony</title>
-  <meta name="description" content="KAWA Omakase offers an intimate $88 seasonal Japanese tasting menu by Chef Tony in NYC's East Village. 20+ years of sushi experience. Book on Resy.">
-  <meta name="keywords" content="omakase NYC, Japanese omakase New York, East Village omakase, KAWA Omakase, Chef Tony sushi, best omakase NYC, affordable omakase Manhattan, tasting menu East Village, sushi counter NYC">
+  <title>Affordable Omakase NYC | $88 Sushi Tasting in East Village | KAWA Omakase</title>
+  <meta name="description" content="Experience KAWA Omakase in NYC's East Village: a 14-course seasonal sushi tasting menu for $88 per guest. Intimate counter seating, fresh seasonal fish, and reservations required.">
+  <meta name="keywords" content="affordable omakase NYC, omakase under 100 NYC, omakase NYC, East Village omakase, KAWA Omakase, $88 omakase NYC, 14 course omakase NYC, Japanese omakase New York, Chef Tony sushi, sushi counter NYC, tasting menu East Village">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="author" content="KAWA Omakase">
 
@@ -26,8 +26,8 @@
   <!-- Open Graph -->
   <meta property="og:type"         content="restaurant">
   <meta property="og:site_name"    content="KAWA Omakase">
-  <meta property="og:title"        content="KAWA Omakase NYC | $88 Japanese Omakase in the East Village">
-  <meta property="og:description"  content="An intimate omakase counter by Chef Tony. Seasonal Japanese tasting menu, $88 per guest. 37 E 1st St, East Village, NYC. Reservations required.">
+  <meta property="og:title"        content="Affordable Omakase NYC | $88 Sushi Tasting in East Village | KAWA Omakase">
+  <meta property="og:description"  content="Experience a 14-course omakase in NYC's East Village for $88 per guest. Intimate chef-led counter seating, seasonal sushi, and reservations required.">
   <meta property="og:url"          content="https://kawaomakase.com/">
   <meta property="og:image"        content="https://kawaomakase.com/images/hero-kawa.jpg">
   <meta property="og:image:width"  content="1200">
@@ -37,8 +37,8 @@
 
   <!-- Twitter/X Card -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="KAWA Omakase NYC | $88 Japanese Omakase in the East Village">
-  <meta name="twitter:description" content="Seasonal Japanese omakase by Chef Tony. $88 per guest, East Village NYC. Book on Resy.">
+  <meta name="twitter:title"       content="Affordable Omakase NYC | $88 Sushi Tasting in East Village | KAWA Omakase">
+  <meta name="twitter:description" content="14-course seasonal sushi tasting menu for $88 in NYC's East Village. Intimate chef-led counter seating at KAWA Omakase. Book on Resy.">
   <meta name="twitter:image"       content="https://kawaomakase.com/images/hero-kawa.jpg">
   <meta name="twitter:image:alt"   content="Omakase plating at KAWA Omakase, East Village NYC">
 
@@ -75,6 +75,19 @@
     nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
     nav a{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
     .reserve{border:1px solid #111;padding:10px 14px;border-radius:999px;color:#111}
+    .reserve-dark{display:inline-block;margin-top:20px;border:1px solid #fff;padding:12px 18px;border-radius:999px;color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+    .reserve-dark:hover{background:#fff;color:#111}
+    .trust-bar{max-width:var(--max);margin:-28px auto 0;padding:0 18px;position:relative;z-index:2}
+    .trust-inner{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+    .trust-item{text-align:center;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+    .trust-item strong{display:block;font-family:"EB Garamond",serif;font-size:22px;letter-spacing:0;text-transform:none;color:var(--text);font-weight:500;margin-bottom:4px}
+    .seo-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+    .text-link{border-bottom:1px solid var(--text);padding-bottom:2px}
+    .faq-list{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .faq-item{border:1px solid var(--line);border-radius:14px;padding:20px}
+    .faq-item h3{font-size:14px;margin:0 0 10px;letter-spacing:.05em;text-transform:uppercase}
+    .faq-item p{font-size:14px;line-height:1.7;color:var(--muted);margin:0}
+    .mobile-sticky-reserve{display:none}
 
     /* Hero */
     .hero{min-height:80vh;position:relative;display:flex;align-items:flex-end;padding:0 18px 50px}
@@ -141,6 +154,8 @@
       .blog-grid{grid-template-columns:1fr 1fr}
       .about-stats{grid-template-columns:repeat(2,1fr)}
       .press-grid{grid-template-columns:1fr 1fr}
+      .trust-inner{grid-template-columns:repeat(2,1fr)}
+      .faq-list{grid-template-columns:1fr}
     }
     @media(max-width:520px){
       h1{font-size:30px}
@@ -148,6 +163,14 @@
       .blog-grid{grid-template-columns:1fr}
       .about-stats{grid-template-columns:repeat(2,1fr)}
       .press-grid{grid-template-columns:1fr}
+      nav ul{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+      nav a{font-size:11px}
+      .header-inner{padding:14px}
+      .brand{font-size:15px}
+      .hero{min-height:76vh;padding-bottom:70px}
+      .trust-inner{grid-template-columns:1fr 1fr;padding:14px}
+      .trust-item strong{font-size:20px}
+      .mobile-sticky-reserve{display:block;position:fixed;left:14px;right:14px;bottom:14px;z-index:80;background:#111;color:#fff;text-align:center;border-radius:999px;padding:14px 18px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 8px 24px rgba(0,0,0,.25)}
     }
   </style>
 </head>
@@ -200,20 +223,33 @@
   <!-- Hero -->
   <section class="hero" aria-label="KAWA Omakase hero banner">
     <div class="hero-inner">
-      <h1>KAWA OMAKASE</h1>
-      <p class="sub">Seasonal Japanese Omakase &middot; East Village, New York City &middot; $88 per guest &middot; Reservations Required</p>
+      <h1>Affordable Omakase NYC in the East Village</h1>
+      <p class="sub">14-Course Seasonal Sushi Tasting &middot; $88 per guest &middot; Reservations Required</p>
+      <a class="reserve-dark" href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank" rel="noopener noreferrer" aria-label="Reserve KAWA Omakase on Resy">Reserve on Resy</a>
     </div>
   </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar" aria-label="KAWA Omakase highlights">
+    <div class="trust-inner">
+      <div class="trust-item"><strong>14</strong> Courses</div>
+      <div class="trust-item"><strong>$88</strong> Per Guest</div>
+      <div class="trust-item"><strong>East Village</strong> NYC</div>
+      <div class="trust-item"><strong>Chef-Led</strong> Counter</div>
+      <div class="trust-item"><strong>Resy</strong> Reservations</div>
+    </div>
+  </div>
 
   <!-- About -->
   <section id="about" aria-labelledby="about-heading">
     <p class="kicker">About</p>
-    <h2 id="about-heading" class="lead">An intimate omakase counter in the heart of the East Village.</h2>
+    <h2 id="about-heading" class="lead">14-course omakase in NYC for $88.</h2>
     <p class="body">
-      KAWA Omakase is a Japanese omakase restaurant at 37 E 1st Street in New York City's East Village, offering a
-      14-course seasonal tasting menu for $88 per guest. Each seat at the counter is a front-row experience — guests
-      watch every course take shape by hand, from the first appetizer to the final handroll, guided entirely by
-      what's freshest and finest that week.
+      KAWA Omakase is an intimate Japanese omakase restaurant at 37 E 1st Street in New York City's East Village,
+      offering a 14-course seasonal sushi tasting menu for $88 per guest. Each seat at the counter is a front-row
+      experience — guests watch every course prepared by hand, from seasonal appetizers and nigiri to handrolls and dessert.
+      For diners searching for affordable omakase in NYC, KAWA brings chef-led technique, premium fish, and warm service
+      into a focused neighborhood setting.
     </p>
     <p class="body" style="margin-top:14px;">
       The word <em>omakase</em> translates from Japanese as "I leave it up to you" — a total trust in the chef.
@@ -249,28 +285,47 @@
     </div>
   </section>
 
+  <!-- Omakase Under $100 -->
+  <section id="omakase-under-100" aria-labelledby="omakase-under-100-heading">
+    <p class="kicker">Affordable Omakase NYC</p>
+    <h2 id="omakase-under-100-heading" class="lead">One of the best omakase options under $100 in NYC.</h2>
+    <p class="body">
+      Finding omakase in NYC under $100 is becoming harder, especially for guests who still want premium seasonal fish,
+      counter seating, and a chef-led tasting experience. KAWA Omakase offers a 14-course menu for $88, making it a strong
+      choice for diners seeking affordable omakase in Manhattan without losing the intimacy and craft of a traditional sushi counter.
+    </p>
+    <p class="body" style="margin-top:14px;">
+      Whether you are visiting the East Village, celebrating a birthday, planning a date night, or trying omakase for the first time,
+      KAWA offers a focused and approachable sushi experience in the heart of downtown New York City.
+    </p>
+    <div class="seo-cta">
+      <a class="reserve" href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank" rel="noopener noreferrer" aria-label="Book KAWA Omakase on Resy">Book on Resy</a>
+      <a class="text-link" href="/blog/best-omakase-nyc-under-100">Read our guide to omakase under $100 in NYC</a>
+    </div>
+  </section>
+
   <!-- Gallery -->
   <section id="gallery" aria-labelledby="gallery-heading">
     <p class="kicker">Gallery</p>
     <h2 id="gallery-heading" class="lead">Seasonal highlights from the omakase counter.</h2>
     <div class="gallery">
       <figure>
-        <img src="images/gallery-1.jpg" alt="Nigiri sushi plating at KAWA Omakase East Village NYC" loading="lazy" width="400" height="300">
+        <img src="images/gallery-1.jpg" alt="Nigiri sushi course at KAWA Omakase in East Village NYC" loading="lazy" width="400" height="300">
       </figure>
       <figure>
-        <img src="images/gallery-2.jpg" alt="Chef Tony preparing sashimi at the omakase counter" loading="lazy" width="400" height="300">
+        <img src="images/gallery-2.jpg" alt="Chef Tony preparing omakase sushi at KAWA Omakase NYC" loading="lazy" width="400" height="300">
       </figure>
       <figure>
-        <img src="images/gallery-3.jpg" alt="Seasonal omakase course at KAWA — tuna and sea urchin" loading="lazy" width="400" height="300">
+        <img src="images/gallery-3.jpg" alt="Uni and toro seasonal omakase course at KAWA Omakase New York City" loading="lazy" width="400" height="300">
       </figure>
       <figure>
-        <img src="images/gallery-4.jpg" alt="Close-up of hand-pressed sushi nigiri at KAWA Omakase" loading="lazy" width="400" height="300">
+        <img src="images/gallery-4.jpg" alt="Hand-pressed sushi nigiri at KAWA Omakase East Village" loading="lazy" width="400" height="300">
       </figure>
       <figure>
-        <img src="images/gallery-5.jpg" alt="Interior of KAWA Omakase counter seating in the East Village" loading="lazy" width="400" height="300">
+        <img src="images/gallery-5.jpg" alt="Intimate omakase counter seating at KAWA Omakase East Village" loading="lazy" width="400" height="300">
       </figure>
       <figure>
-        <img src="images/gallery-6.jpg" alt="Japanese omakase dessert course by Chef Tony" loading="lazy" width="400" height="300">
+        <img src="images/gallery-6.jpg" alt="Japanese omakase dessert course at KAWA Omakase NYC" loading="lazy" width="400" height="300">
       </figure>
     </div>
   </section>
@@ -392,6 +447,38 @@
 </p>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="faq-heading">
+    <p class="kicker">FAQ</p>
+    <h2 id="faq-heading" class="lead">KAWA Omakase FAQ.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>How much is KAWA Omakase?</h3>
+        <p>KAWA Omakase offers a 14-course seasonal tasting menu for $88 per guest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where is KAWA Omakase located?</h3>
+        <p>KAWA Omakase is located at 37 E 1st Street in New York City's East Village.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need a reservation?</h3>
+        <p>Yes. KAWA Omakase is reservation-only, and guests are encouraged to reserve in advance through Resy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is KAWA good for first-time omakase?</h3>
+        <p>Yes. KAWA is intimate, chef-led, and approachable, making it a strong choice for first-time omakase guests in NYC.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What kind of food does KAWA serve?</h3>
+        <p>KAWA serves seasonal Japanese omakase with nigiri, appetizers, handrolls, and market-driven ingredients selected by the chef.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I book KAWA Omakase?</h3>
+        <p>Reservations are available through Resy. Guests can also call KAWA Omakase at (347) 619-3346.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Info -->
   <section id="info" aria-labelledby="info-heading">
     <p class="kicker">Info</p>
@@ -449,6 +536,8 @@
   </p>
 </footer>
 
+<a class="mobile-sticky-reserve" href="https://resy.com/cities/new-york-ny/venues/kawa-omakase" target="_blank" rel="noopener noreferrer" aria-label="Reserve KAWA Omakase on Resy">Reserve on Resy</a>
+
 <!-- Schema: Restaurant -->
 <script type="application/ld+json">
 {
@@ -457,14 +546,14 @@
   "@id":"https://kawaomakase.com/#restaurant",
   "name":"KAWA Omakase",
   "alternateName":"KAWA",
-  "description":"An intimate Japanese omakase counter in NYC's East Village. Seasonal $88 tasting menu by Chef Tony with over 20 years of New York sushi experience.",
+  "description":"KAWA Omakase is an intimate Japanese omakase restaurant in NYC's East Village, offering a 14-course seasonal sushi tasting menu for $88 per guest.",
   "founder":{"@type":"Person","name":"Chef Tony","jobTitle":"Executive Chef"},
   "url":"https://kawaomakase.com/",
   "telephone":"+13476193346",
-  "priceRange":"$$$$",
+  "priceRange":"$88",
   "servesCuisine":["Japanese","Omakase","Sushi"],
-  "menu":"https://kawaomakase.com/menu/",
-  "acceptsReservations":"Yes",
+  "hasMenu":"https://kawaomakase.com/menu/",
+  "acceptsReservations":true,
   "reservationUrl":"https://resy.com/cities/new-york-ny/venues/kawa-omakase",
   "hasMap":"https://maps.google.com/?q=KAWA+Omakase,37+E+1st+St,New+York,NY+10003",
   "address":{"@type":"PostalAddress","streetAddress":"37 E 1st St","addressLocality":"New York","addressRegion":"NY","postalCode":"10003","addressCountry":"US"},
@@ -501,11 +590,12 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"How much does KAWA Omakase cost?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase offers a seasonal Japanese tasting menu for $88 per guest."}},
-    {"@type":"Question","name":"Where is KAWA Omakase located?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase is located at 37 E 1st Street, New York, NY 10003 in the East Village neighborhood of Manhattan."}},
-    {"@type":"Question","name":"How do I make a reservation at KAWA Omakase?","acceptedAnswer":{"@type":"Answer","text":"Reservations at KAWA Omakase are required and can be made through Resy at resy.com. You can also call (347) 619-3346."}},
-    {"@type":"Question","name":"What are KAWA Omakase's hours?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase is open Tuesday through Thursday and Sunday from 5:00 PM to 10:00 PM, and Friday through Saturday from 5:00 PM to 11:00 PM. Closed on Mondays."}},
-    {"@type":"Question","name":"Who is the chef at KAWA Omakase?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase is led by Chef Tony, who brings over 20 years of experience from celebrated New York restaurants including Catch NYC, Sushi Dojo, Sushi on Jones, Akimori, and Bonito 47."}}
+    {"@type":"Question","name":"How much is KAWA Omakase?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase offers a 14-course seasonal tasting menu for $88 per guest."}},
+    {"@type":"Question","name":"Where is KAWA Omakase located?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase is located at 37 E 1st Street in New York City's East Village."}},
+    {"@type":"Question","name":"Do I need a reservation?","acceptedAnswer":{"@type":"Answer","text":"Yes. KAWA Omakase is reservation-only, and guests are encouraged to reserve in advance through Resy."}},
+    {"@type":"Question","name":"Is KAWA good for first-time omakase?","acceptedAnswer":{"@type":"Answer","text":"Yes. KAWA is intimate, chef-led, and approachable, making it a strong choice for first-time omakase guests in NYC."}},
+    {"@type":"Question","name":"What kind of food does KAWA serve?","acceptedAnswer":{"@type":"Answer","text":"KAWA serves seasonal Japanese omakase with nigiri, appetizers, handrolls, and market-driven ingredients selected by the chef."}},
+    {"@type":"Question","name":"How do I book KAWA Omakase?","acceptedAnswer":{"@type":"Answer","text":"Reservations are available through Resy. Guests can also call KAWA Omakase at (347) 619-3346."}}
   ]
 }
 </script>
@@ -552,4 +642,26 @@
       "datePublished":"2025-04-20",
       "author":{"@type":"Person","name":"Chef Tony"},
       "publisher":{"@type":"Organization","name":"KAWA Omakase"},
-      "articleSection":"Cr
+      "articleSection":"Craft & Ingredients",
+      "image":"https://kawaomakase.com/images/blog-seasonal-fish.jpg",
+      "keywords":["seasonal fish sourcing","omakase ingredients","Chef Tony KAWA","East Village sushi","seasonal sushi NYC"]
+    }
+  ]
+}
+</script>
+
+<!-- Schema: WebSite + SearchAction -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"KAWA Omakase",
+  "url":"https://kawaomakase.com/",
+  "publisher":{"@type":"Restaurant","name":"KAWA Omakase","@id":"https://kawaomakase.com/#restaurant"},
+  "inLanguage":"en-US"
+}
+</script>
+
+</body>
+</html>
+
