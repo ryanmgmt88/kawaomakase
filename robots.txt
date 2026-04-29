@@ -1,4 +1,42 @@
+# KAWA Omakase robots.txt
+# Allow search engines and AI search crawlers to discover public restaurant pages.
+
 User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT search crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic / Claude crawler
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Google / Gemini / Google Search crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity crawler
+User-agent: PerplexityBot
+Allow: /
+
+# Common search engine crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 # Block admin or private paths if they exist
