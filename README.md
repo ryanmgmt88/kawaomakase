@@ -9,8 +9,8 @@ This is a static website hosted on **GitHub Pages** with a custom domain (config
 ```
 .
 ├── index.html                 Homepage (about, gallery, journal, info, reservations)
-├── menu.html                  Tasting menu page
 ├── menu/
+│   ├── index.html             Tasting menu hub page ($88 omakase)
 │   ├── a-la-carte.html        À la carte menu
 │   └── beverage.html          Beverage menu (sake, wine, beer)
 ├── blog/
