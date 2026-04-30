@@ -1,10 +1,13 @@
 # KAWA Omakase robots.txt
 # Allow search engines and AI search crawlers to discover public restaurant pages.
+# Block admin / private paths globally.
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
-# OpenAI / ChatGPT search crawlers
+# OpenAI / ChatGPT crawlers
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -14,34 +17,56 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
-# Anthropic / Claude crawler
+# Anthropic / Claude crawlers
 User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-User
 Allow: /
 
-# Google / Gemini / Google Search crawlers
+User-agent: Claude-SearchBot
+Allow: /
+
+# Google / Gemini crawlers
 User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-# Perplexity crawler
-User-agent: PerplexityBot
-Allow: /
-
-# Common search engine crawlers
+# Microsoft / Bing / Copilot
 User-agent: Bingbot
 Allow: /
 
-User-agent: DuckDuckBot
+# Apple Intelligence / Siri
+User-agent: Applebot
 Allow: /
 
-# Block admin or private paths if they exist
-Disallow: /admin/
-Disallow: /private/
+User-agent: Applebot-Extended
+Allow: /
+
+# Perplexity crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Meta AI / Llama
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Amazon (Alexa / Q)
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (feeds many open and commercial models)
+User-agent: CCBot
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
 
 # Sitemap location
 Sitemap: https://kawaomakase.com/sitemap.xml
