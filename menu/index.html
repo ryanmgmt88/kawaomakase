@@ -601,12 +601,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://kawaomakase.com/#restaurant",
   "name": "KAWA Omakase",
   "image": "https://kawaomakase.com/images/gallery-2.jpg",
+  "logo": "https://kawaomakase.com/logo.png",
   "url": "https://kawaomakase.com/",
   "telephone": "+13476193346",
   "servesCuisine": ["Japanese", "Sushi", "Omakase"],
   "priceRange": "$$",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, American Express, Apple Pay, Google Pay",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "37 E 1st St",
@@ -621,6 +625,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     "https://resy.com/cities/new-york-ny/venues/kawa-omakase",
     "https://www.yelp.com/biz/kawa-omakase-new-york",
     "https://g.page/r/CUvR4FwVUcxaEBM"
+  ]
+}
+</script>
+
+<!-- Breadcrumb schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://kawaomakase.com/"},
+    {"@type":"ListItem","position":2,"name":"Menu","item":"https://kawaomakase.com/menu/"}
+  ]
+}
+</script>
+
+<!-- FAQ schema (mirrors the FAQ section on this page) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much is the KAWA Omakase menu?","acceptedAnswer":{"@type":"Answer","text":"The KAWA Omakase seasonal tasting menu is $88 per guest. The experience includes a chef-led 14-course progression at our East Village sushi counter."}},
+    {"@type":"Question","name":"What is included in the 14-course omakase?","acceptedAnswer":{"@type":"Answer","text":"The menu includes 2 appetizers, 10 pieces of nigiri, 1 canapé, and 1 handroll. The exact menu may change based on seasonality, market availability, and the chef's selection."}},
+    {"@type":"Question","name":"Where is KAWA Omakase located?","acceptedAnswer":{"@type":"Answer","text":"KAWA Omakase is located at 37 E 1st St, New York, NY 10003, in the East Village near the Lower East Side, Bowery, NoHo, Nolita, SoHo, NYU, Union Square, and Chinatown."}},
+    {"@type":"Question","name":"Do I need a reservation?","acceptedAnswer":{"@type":"Answer","text":"Yes. KAWA Omakase is reservation-only. Guests can reserve seats through Resy for the 14-course omakase experience."}},
+    {"@type":"Question","name":"Is KAWA good for first-time omakase diners?","acceptedAnswer":{"@type":"Answer","text":"Yes. KAWA is approachable for first-time omakase guests because the menu is clear, seasonal, chef-led, and priced at $88 for a complete 14-course sushi tasting."}},
+    {"@type":"Question","name":"Is KAWA good for date night or birthdays?","acceptedAnswer":{"@type":"Answer","text":"Yes. The intimate counter setting makes KAWA Omakase a strong option for date nights, birthdays, anniversaries, and small celebrations in downtown Manhattan."}}
   ]
 }
 </script>
