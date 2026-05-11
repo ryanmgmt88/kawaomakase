@@ -17,3 +17,6 @@ Desktop.ini
 
 # Logs
 *.log
+
+# Private marketing materials (not part of the public website)
+marketing/

@@ -126,6 +126,17 @@
   </url>
 
   <url>
+    <loc>https://kawaomakase.com/blog/</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kawaomakase.com/images/gallery-2.jpg</image:loc>
+      <image:title>The KAWA Omakase Journal — sushi counter notes from Chef Tony</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://kawaomakase.com/blog/what-is-omakase-guide</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
