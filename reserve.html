@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserve | Kawa Omakase — NYC East Village</title>
-    <meta name="description" content="Reserve your seat at Kawa Omakase — approachable chef's choice sushi tasting in NYC's East Village, under $100. Book on Resy.">
+    <meta name="description" content="Reserve your seat at Kawa Omakase — 14-course chef's choice sushi tasting in NYC's East Village for $88. Book on Resy.">
 
     <!-- ==================================================================== -->
-    <!-- GOOGLE ADS CONVERSION TRACKING                                       -->
-    <!-- The Google Tag (gtag.js) is already installed site-wide on           -->
-    <!-- kawaomakase.com (AW-16913043261), so we only need the event snippet  -->
-    <!-- that fires when someone clicks "Reserve on Resy" below.              -->
+    <!-- GOOGLE ADS CONVERSION TRACKING (self-contained, no dependencies)     -->
     <!-- ==================================================================== -->
+    <!-- Step 1: Load the Google Tag (gtag.js) for AW-16913043261 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16913043261"></script>
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16913043261');
+
+      // Step 2: Fire the "Resy Reservation Click" conversion when the
+      // button is clicked, then redirect to Resy.
       function trackResyClick(url) {
-        // Fire the Google Ads "Resy Reservation Click" conversion event,
-        // then redirect to Resy after the conversion ping completes.
-        if (typeof gtag === 'function') {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-16913043261/UjWBCIueibAcEL2e4oA_',
-            'value': 50.0,
-            'currency': 'USD',
-            'event_callback': function() { window.location.href = url; }
-          });
-          // Fallback: if gtag doesn't call back within 1.2s, redirect anyway
-          setTimeout(function(){ window.location.href = url; }, 1200);
-        } else {
-          // gtag not loaded (e.g., tag blocked) — just redirect
-          window.location.href = url;
-        }
+        gtag('event', 'conversion', {
+          'send_to': 'AW-16913043261/UjWBCIueibAcEL2e4oA_',
+          'value': 50.0,
+          'currency': 'USD',
+          'event_callback': function() { window.location.href = url; }
+        });
+        // Fallback: if gtag is blocked or slow, redirect after 1.2s anyway
+        setTimeout(function(){ window.location.href = url; }, 1200);
         return false;
       }
     </script>
@@ -155,9 +154,9 @@
     <div class="container">
         <div class="brand">Kawa Omakase</div>
         <h1>Reserve your <em>omakase</em> experience</h1>
-        <p class="tagline">Multi-course chef's choice sushi tasting in NYC's East Village.</p>
+        <p class="tagline">14-course chef's choice sushi tasting in NYC's East Village.</p>
 
-        <div class="price-hook">UNDER $100 PER GUEST</div>
+        <div class="price-hook">$88 &middot; 14 COURSES &middot; EAST VILLAGE</div>
 
         <div>
             <a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase"
@@ -172,8 +171,8 @@
         <div class="features">
             <div class="feature">
                 <span class="feature-icon">&#127843;</span>
-                <strong>Chef's Choice</strong>
-                Daily selection of the freshest fish
+                <strong>14 Courses</strong>
+                Chef's choice tasting, fresh daily
             </div>
             <div class="feature">
                 <span class="feature-icon">&#129694;</span>
@@ -187,9 +186,8 @@
             </div>
             <div class="feature">
                 <span class="feature-icon">&#128176;</span>
-                <strong>Under $100</strong>
-                Premium omakase at an honest price
-            </div>
+                <strong>$88 Per Guest</strong>
+                NYC's best-value omakase</div>
         </div>
     </div>
 
