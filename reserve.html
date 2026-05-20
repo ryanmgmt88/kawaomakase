@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve | Kawa Omakase — NYC East Village</title>
+    <meta name="description" content="Reserve your seat at Kawa Omakase — approachable chef's choice sushi tasting in NYC's East Village, under $100. Book on Resy.">
+
+    <!-- ==================================================================== -->
+    <!-- GOOGLE ADS CONVERSION TRACKING                                       -->
+    <!-- The Google Tag (gtag.js) is already installed site-wide on           -->
+    <!-- kawaomakase.com (AW-16913043261), so we only need the event snippet  -->
+    <!-- that fires when someone clicks "Reserve on Resy" below.              -->
+    <!-- ==================================================================== -->
+    <script>
+      function trackResyClick(url) {
+        // Fire the Google Ads "Resy Reservation Click" conversion event,
+        // then redirect to Resy after the conversion ping completes.
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-16913043261/UjWBCIueibAcEL2e4oA_',
+            'value': 50.0,
+            'currency': 'USD',
+            'event_callback': function() { window.location.href = url; }
+          });
+          // Fallback: if gtag doesn't call back within 1.2s, redirect anyway
+          setTimeout(function(){ window.location.href = url; }, 1200);
+        } else {
+          // gtag not loaded (e.g., tag blocked) — just redirect
+          window.location.href = url;
+        }
+        return false;
+      }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #f5f5f5;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .brand {
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #c9a961;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        h1 em {
+            font-style: italic;
+            color: #c9a961;
+        }
+        .tagline {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+        .price-hook {
+            display: inline-block;
+            background: #c9a961;
+            color: #0a0a0a;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+        .cta {
+            display: inline-block;
+            background: #c9a961;
+            color: #0a0a0a;
+            padding: 20px 48px;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .cta:hover {
+            background: #d9b971;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(201, 169, 97, 0.3);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            margin-top: 64px;
+            padding-top: 48px;
+            border-top: 1px solid #222;
+        }
+        .feature {
+            color: #aaa;
+            font-size: 14px;
+        }
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .feature strong {
+            display: block;
+            color: #f5f5f5;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #555;
+            font-size: 13px;
+            border-top: 1px solid #1a1a1a;
+        }
+        .footer a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        .address {
+            margin-top: 24px;
+            font-size: 14px;
+            color: #888;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 36px; }
+            .cta { padding: 18px 36px; font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand">Kawa Omakase</div>
+        <h1>Reserve your <em>omakase</em> experience</h1>
+        <p class="tagline">Multi-course chef's choice sushi tasting in NYC's East Village.</p>
+
+        <div class="price-hook">UNDER $100 PER GUEST</div>
+
+        <div>
+            <a href="https://resy.com/cities/new-york-ny/venues/kawa-omakase"
+               class="cta"
+               onclick="return trackResyClick('https://resy.com/cities/new-york-ny/venues/kawa-omakase');">
+                Reserve on Resy &rarr;
+            </a>
+        </div>
+
+        <p class="address">37 East 1st Street &middot; New York, NY 10003</p>
+
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">&#127843;</span>
+                <strong>Chef's Choice</strong>
+                Daily selection of the freshest fish
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#129694;</span>
+                <strong>Counter Seating</strong>
+                Watch the chef work the sushi bar
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#127862;</span>
+                <strong>Sake Pairings</strong>
+                Curated Japanese sake available
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#128176;</span>
+                <strong>Under $100</strong>
+                Premium omakase at an honest price
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Kawa Omakase &middot; 37 East 1st Street, NYC
+    </div>
+</body>
+</html>
