@@ -1,0 +1,37 @@
+name: FIFA Ticket Tracker
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          cd fifa-ticket-tracker
+          pip install -r requirements.txt
+
+      - name: Run tracker
+        run: |
+          cd fifa-ticket-tracker
+          python fifa_price_tracker.py
+        env:
+          TARGET_PRICE: "500"
+
+      - name: Upload price history
+        uses: actions/upload-artifact@v4
+        with:
+          name: fifa-price-history
+          path: fifa-ticket-tracker/fifa_price_history.csv
