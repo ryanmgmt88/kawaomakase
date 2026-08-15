@@ -20,3 +20,10 @@ Desktop.ini
 
 # Private marketing materials (not part of the public website)
 marketing/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
