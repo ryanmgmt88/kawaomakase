@@ -19,7 +19,7 @@ This is a static website hosted on **GitHub Pages** with a custom domain (config
 │   └── index.html             Sushi boxes, platters, hand roll kits, gift cards
 ├── blog/
 │   ├── what-is-omakase-guide/         "What Is Omakase — A First-Timer's Guide"
-│   ├── best-omakase-nyc-under-100/    "Best Omakase in NYC Under $100"
+│   ├── best-omakase-nyc-under-100/    "Omakase in NYC Under $100"
 │   └── seasonal-fish-sourcing-omakase/ "How We Choose What's on the Menu"
 ├── images/                    Hero photos, gallery, sake bottles
 ├── sitemap.xml                For search engines
