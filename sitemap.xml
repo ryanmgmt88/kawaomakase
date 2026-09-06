@@ -49,6 +49,28 @@
   </url>
 
   <url>
+    <loc>https://kawaomakase.com/events/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kawaomakase.com/images/gallery-5.jpg</image:loc>
+      <image:title>KAWA Omakase private events and catering in East Village NYC</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://kawaomakase.com/shop/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://kawaomakase.com/images/gallery-1.jpg</image:loc>
+      <image:title>KAWA Omakase sushi boxes, platters, hand roll kits, and gift cards</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://kawaomakase.com/affordable-omakase-nyc.html</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>

@@ -13,6 +13,10 @@ This is a static website hosted on **GitHub Pages** with a custom domain (config
 │   ├── index.html             Tasting menu hub page ($88 omakase)
 │   ├── a-la-carte.html        À la carte menu
 │   └── beverage.html          Beverage menu (sake, wine, beer)
+├── events/
+│   └── index.html             Private events, buyouts, catering, quote inquiries
+├── shop/
+│   └── index.html             Sushi boxes, platters, hand roll kits, gift cards
 ├── blog/
 │   ├── what-is-omakase-guide/         "What Is Omakase — A First-Timer's Guide"
 │   ├── best-omakase-nyc-under-100/    "Best Omakase in NYC Under $100"
