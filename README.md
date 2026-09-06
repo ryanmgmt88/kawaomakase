@@ -1,6 +1,6 @@
-# KAWA Omakase — Website
+# Kawa Omakase — Website
 
-Source code for [kawaomakase.com](https://kawaomakase.com), the website for KAWA Omakase, an intimate $88 Japanese omakase counter by Chef Tony in NYC's East Village.
+Source code for [kawaomakase.com](https://kawaomakase.com), the website for Kawa Omakase, an intimate $88 Japanese omakase counter by Chef Tony in NYC's East Village.
 
 ## What's in this repo
 
@@ -46,5 +46,5 @@ Within a minute or two, the live site at kawaomakase.com will update automatical
 
 ## Contact
 
-37 E 1st St, East Village, New York, NY 10003
+37 East 1st Street, New York, NY 10003
 (347) 619-3346

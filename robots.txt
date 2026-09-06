@@ -1,4 +1,4 @@
-# KAWA Omakase robots.txt
+# Kawa Omakase robots.txt
 # Allow search engines and AI search crawlers to discover public restaurant pages.
 # Block admin / private paths globally.
 
